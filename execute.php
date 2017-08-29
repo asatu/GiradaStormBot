@@ -8,6 +8,12 @@ define('APPLICATION_NAME', 'giradastormbot');
 define('CREDENTIALS_PATH', '~/.credentials/sheets.googleapis.com-php-quickstart.json');
 define('CLIENT_SECRET_PATH', dirname(__FILE__) . '/client_secret.json');
 
+// If modifying these scopes, delete your previously saved credentials
+// at ~/.credentials/sheets.googleapis.com-php-quickstart.json
+define('SCOPES', implode(' ', array(
+        Google_Service_Sheets::SPREADSHEETS_READONLY)
+));
+
 /**
  * Returns an authorized API client.
  * @return Google_Client the authorized client object
@@ -16,6 +22,7 @@ function getClient() {
     $client = new Google_Client();
     $client->setApplicationName(APPLICATION_NAME);
     $client->setAuthConfig(CLIENT_SECRET_PATH);
+    $client->setScopes(SCOPES);
     $client->setAccessType('offline');
 
     // Load previously authorized credentials from a file.
