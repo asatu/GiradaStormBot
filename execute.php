@@ -82,6 +82,20 @@ elseif(strcmp($text, "/listaprezzo") === 0)
 }
 elseif(strcmp($text, "/ordina") === 0)
 {
+    // Create new PHPExcel object
+    $objPHPExcel = new PHPExcel();
+
+    // Add some data
+    $objPHPExcel->setActiveSheetIndex(0)
+        ->setCellValue('A1', 'Hello')
+        ->setCellValue('B2', 'world!')
+        ->setCellValue('C1', 'Hello')
+        ->setCellValue('D2', 'world!');
+
+    // Save Excel 2007 file
+    $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
+    $objWriter->save(str_replace('.php', '.xlsx', __FILE__));
+    
 	$parameters = array('chat_id' => $chatId, "text" => "qui ordiniamo aaaaaaaaaaaa");
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);	
