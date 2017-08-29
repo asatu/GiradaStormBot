@@ -23,11 +23,11 @@ $spreadsheet_id = 'https://docs.google.com/spreadsheets/d/1OpkvFJRzxZ2lxv_CPV1ak
  *
  * @see https://developers.google.com/sheets/api/guides/concepts#a1_notation
  */
-$spreadsheet_range = 'Sheet1!A1:B2';
-putenv('GOOGLE_APPLICATION_CREDENTIALS=' . $service_account_file);
-$client = new Google_Client();
-$client->useApplicationDefaultCredentials();
-$client->addScope(Google_Service_Sheets::SPREADSHEETS_READONLY);
-$service = new Google_Service_Sheets($client);
-$result = $service->spreadsheets_values->get($spreadsheet_id, $spreadsheet_range);
-var_dump($result->getValues());
+    $spreadsheet_range = 'Sheet1!A1:A1';
+    putenv('GOOGLE_APPLICATION_CREDENTIALS=' . $service_account_file);
+    $client = new Google_Client();
+    $client->useApplicationDefaultCredentials();
+    $client->addScope(Google_Service_Sheets::SPREADSHEETS);
+    $service = new Google_Service_Sheets($client);
+    $result = $service->spreadsheets_values->get($spreadsheet_id, $spreadsheet_range);
+    var_dump($result->getValues());
