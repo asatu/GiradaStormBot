@@ -1,5 +1,10 @@
 <?php
 
+require_once dirname(__FILE__) . '/vendor/autoload.php';
+
+$service_account_file = dirname(__FILE__) . '/giradastormbot.json';
+$spreadsheet_id = '1OpkvFJRzxZ2lxv_CPV1akNeagaKAGZjTlhRRzxrJbrc';
+
 $content = file_get_contents("php://input");
 $request = json_decode($content, false);
 if(!$request)
@@ -67,7 +72,16 @@ if(strcmp($text, "/start") === 0)
 }
 elseif(strcmp($text, "/lista") === 0)
 {
-	$parameters = array('chat_id' => $chatId, "text" => "qui scarichiamo la lista aaaaaaaaaa");
+    $spreadsheet_range = 'Foglio1!A1:A1';
+    putenv('GOOGLE_APPLICATION_CREDENTIALS=' . $service_account_file);
+    $client = new Google_Client();
+    $client->useApplicationDefaultCredentials();
+    $client->addScope(Google_Service_Sheets::SPREADSHEETS);
+    $service = new Google_Service_Sheets($client);
+    $result = $service->spreadsheets_values->get($spreadsheet_id, $spreadsheet_range);
+    $response = $result->getValues();
+
+	$parameters = array('chat_id' => $chatId, "text" => $response);
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);	
 }
