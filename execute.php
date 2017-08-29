@@ -81,7 +81,7 @@ elseif(strcmp($text, "/lista") === 0)
     $result = $service->spreadsheets_values->get($spreadsheet_id, $spreadsheet_range);
     $response = $result->getValues()[0][0];
 
-	$parameters = array('chat_id' => $chatId, "text" => $response);
+	$parameters = array('chat_id' => $chatId, "text" => "https://docs.google.com/spreadsheets/d/1OpkvFJRzxZ2lxv_CPV1akNeagaKAGZjTlhRRzxrJbrc/edit?usp=sharing");
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);	
 }
