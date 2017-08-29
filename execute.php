@@ -72,6 +72,7 @@ if(strcmp($text, "/start") === 0)
 }
 elseif(strcmp($text, "/lista") === 0)
 {
+    /**
     $spreadsheet_range = 'Foglio1!A1:A1';
     putenv('GOOGLE_APPLICATION_CREDENTIALS=' . $service_account_file);
     $client = new Google_Client();
@@ -80,8 +81,11 @@ elseif(strcmp($text, "/lista") === 0)
     $service = new Google_Service_Sheets($client);
     $result = $service->spreadsheets_values->get($spreadsheet_id, $spreadsheet_range);
     $response = $result->getValues()[0][0];
-
-	$parameters = array('chat_id' => $chatId, "text" => "https://docs.google.com/spreadsheets/d/1OpkvFJRzxZ2lxv_CPV1akNeagaKAGZjTlhRRzxrJbrc/edit?usp=sharing");
+    */
+    
+    $response = $driveService->files->export($spreadsheet_id, 'application/pdf');
+    $content = $response->getBody()->getContents();
+	$parameters = array('chat_id' => $chatId, "text" => $content);
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);	
 }
