@@ -15,7 +15,7 @@ $service_account_file = dirname(__FILE__) . '/giradastormbot-85ac95ab1e62.json';
  * This is the long string that identifies the spreadsheet. Pick it up from
  * the spreadsheet's URL and paste it below.
  */
-$spreadsheet_id = 'https://docs.google.com/spreadsheets/d/1OpkvFJRzxZ2lxv_CPV1akNeagaKAGZjTlhRRzxrJbrc/edit?usp=sharing';
+$spreadsheet_id = '1OpkvFJRzxZ2lxv_CPV1akNeagaKAGZjTlhRRzxrJbrc';
 /**
  * This is the range that you want to extract out of the spreadsheet. It uses
  * A1 notation. For example, if you want a whole sheet of the spreadsheet, then
@@ -23,7 +23,7 @@ $spreadsheet_id = 'https://docs.google.com/spreadsheets/d/1OpkvFJRzxZ2lxv_CPV1ak
  *
  * @see https://developers.google.com/sheets/api/guides/concepts#a1_notation
  */
-    $spreadsheet_range = 'Sheet1!A1:A1';
+    $spreadsheet_range = 'Foglio1!A1:A1';
     putenv('GOOGLE_APPLICATION_CREDENTIALS=' . $service_account_file);
     $client = new Google_Client();
     $client->useApplicationDefaultCredentials();
