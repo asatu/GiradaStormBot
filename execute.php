@@ -94,8 +94,8 @@ elseif(strcmp($text, "/ordina") === 0)
 
     // Save Excel 2007 file
     $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
-    $objWriter->save(str_replace('.php', '.xlsx', __FILE__));
-    
+    $objWriter->save('aa.xlsx');
+
 	$parameters = array('chat_id' => $chatId, "text" => "qui ordiniamo aaaaaaaaaaaa");
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);	
