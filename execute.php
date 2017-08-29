@@ -79,7 +79,7 @@ elseif(strcmp($text, "/lista") === 0)
     $client->addScope(Google_Service_Sheets::SPREADSHEETS);
     $service = new Google_Service_Sheets($client);
     $result = $service->spreadsheets_values->get($spreadsheet_id, $spreadsheet_range);
-    $response = $result->getValues();
+    $response = $result->getValues()[0][0];
 
 	$parameters = array('chat_id' => $chatId, "text" => $response);
 	$parameters["method"] = "sendMessage";
