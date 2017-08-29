@@ -10,12 +10,14 @@ require_once dirname(__FILE__) . '/vendor/autoload.php';
  * created the service account. Notice that this path must be readable by
  * this script.
  */
-$service_account_file = dirname(__FILE__) . '/giradastormbot-85ac95ab1e62.json';
+$service_account_file = dirname(__FILE__) . '/giradastormbot.json';
 /**
  * This is the long string that identifies the spreadsheet. Pick it up from
  * the spreadsheet's URL and paste it below.
  */
+
 $spreadsheet_id = '1OpkvFJRzxZ2lxv_CPV1akNeagaKAGZjTlhRRzxrJbrc';
+echo $spreadsheet_id;
 /**
  * This is the range that you want to extract out of the spreadsheet. It uses
  * A1 notation. For example, if you want a whole sheet of the spreadsheet, then
