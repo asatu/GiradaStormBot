@@ -2,8 +2,363 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f131ca8-f089-4ce4-b44a-c1278cf33c86" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/GiradaStormBot.iml" afterPath="$PROJECT_DIR$/.idea/GiradaStormBot.iml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Autoloader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/CachedObjectStorage/APC.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/CachedObjectStorage/CacheBase.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/CachedObjectStorage/DiscISAM.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/CachedObjectStorage/ICache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/CachedObjectStorage/Igbinary.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/CachedObjectStorage/Memcache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/CachedObjectStorage/Memory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/CachedObjectStorage/MemoryGZip.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/CachedObjectStorage/MemorySerialized.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/CachedObjectStorage/PHPTemp.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/CachedObjectStorage/SQLite.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/CachedObjectStorage/SQLite3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/CachedObjectStorage/Wincache.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/CachedObjectStorageFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/CalcEngine/CyclicReferenceStack.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/CalcEngine/Logger.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Calculation.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Calculation/Database.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Calculation/DateTime.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Calculation/Engineering.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Calculation/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Calculation/ExceptionHandler.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Calculation/Financial.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Calculation/FormulaParser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Calculation/FormulaToken.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Calculation/Function.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Calculation/Functions.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Calculation/Logical.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Calculation/LookupRef.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Calculation/MathTrig.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Calculation/Statistical.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Calculation/TextData.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Calculation/Token/Stack.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Calculation/functionlist.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Cell.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Cell/AdvancedValueBinder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Cell/DataType.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Cell/DataValidation.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Cell/DefaultValueBinder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Cell/Hyperlink.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Cell/IValueBinder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Chart.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Chart/Axis.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Chart/DataSeries.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Chart/DataSeriesValues.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Chart/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Chart/GridLines.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Chart/Layout.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Chart/Legend.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Chart/PlotArea.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Chart/Properties.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Chart/Renderer/PHP Charting Libraries.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Chart/Renderer/jpgraph.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Chart/Title.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Comment.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/DocumentProperties.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/DocumentSecurity.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/HashTable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Helper/HTML.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/IComparable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/IOFactory.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/NamedRange.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/Abstract.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/CSV.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/DefaultReadFilter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/Excel2003XML.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/Excel2007.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/Excel2007/Chart.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/Excel2007/Theme.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/Excel5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/Excel5/Color.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/Excel5/Color/BIFF5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/Excel5/Color/BIFF8.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/Excel5/Color/BuiltIn.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/Excel5/ErrorCode.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/Excel5/Escher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/Excel5/MD5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/Excel5/RC4.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/Excel5/Style/Border.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/Excel5/Style/FillPattern.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/Gnumeric.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/HTML.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/IReadFilter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/IReader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/OOCalc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Reader/SYLK.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/ReferenceHelper.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/RichText.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/RichText/ITextElement.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/RichText/Run.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/RichText/TextElement.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Settings.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/CodePage.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/Date.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/Drawing.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/Escher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/Escher/DgContainer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/Escher/DgContainer/SpgrContainer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/Escher/DgContainer/SpgrContainer/SpContainer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/Escher/DggContainer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/Escher/DggContainer/BstoreContainer.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/Escher/DggContainer/BstoreContainer/BSE.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/Escher/DggContainer/BstoreContainer/BSE/Blip.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/Excel5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/File.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/Font.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/JAMA/CHANGELOG.TXT" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/JAMA/CholeskyDecomposition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/JAMA/EigenvalueDecomposition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/JAMA/LUDecomposition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/JAMA/Matrix.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/JAMA/QRDecomposition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/JAMA/SingularValueDecomposition.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/JAMA/utils/Error.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/JAMA/utils/Maths.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/OLE.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/OLE/ChainedBlockStream.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/OLE/PPS.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/OLE/PPS/File.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/OLE/PPS/Root.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/OLERead.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/PCLZip/gnu-lgpl.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/PCLZip/pclzip.lib.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/PCLZip/readme.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/PasswordHasher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/String.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/TimeZone.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/XMLWriter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/ZipArchive.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/ZipStreamWrapper.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/trend/bestFitClass.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/trend/exponentialBestFitClass.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/trend/linearBestFitClass.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/trend/logarithmicBestFitClass.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/trend/polynomialBestFitClass.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/trend/powerBestFitClass.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Shared/trend/trendClass.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Style.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Style/Alignment.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Style/Border.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Style/Borders.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Style/Color.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Style/Conditional.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Style/Fill.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Style/Font.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Style/NumberFormat.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Style/Protection.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Style/Supervisor.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/AutoFilter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/AutoFilter/Column.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/AutoFilter/Column/Rule.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/BaseDrawing.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/CellIterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/Column.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/ColumnCellIterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/ColumnDimension.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/ColumnIterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/Dimension.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/Drawing.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/Drawing/Shadow.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/HeaderFooter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/HeaderFooterDrawing.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/MemoryDrawing.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/PageMargins.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/PageSetup.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/Protection.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/Row.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/RowCellIterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/RowDimension.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/RowIterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Worksheet/SheetView.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/WorksheetIterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Abstract.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/CSV.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel2007.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel2007/Chart.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel2007/Comments.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel2007/ContentTypes.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel2007/DocProps.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel2007/Drawing.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel2007/Rels.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel2007/RelsRibbon.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel2007/RelsVBA.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel2007/StringTable.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel2007/Style.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel2007/Theme.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel2007/Workbook.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel2007/Worksheet.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel2007/WriterPart.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel5/BIFFwriter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel5/Escher.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel5/Font.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel5/Parser.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel5/Workbook.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel5/Worksheet.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel5/Xf.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/Exception.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/HTML.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/IWriter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/OpenDocument.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/OpenDocument/Cell/Comment.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/OpenDocument/Content.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/OpenDocument/Meta.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/OpenDocument/MetaInf.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/OpenDocument/Mimetype.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/OpenDocument/Settings.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/OpenDocument/Styles.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/OpenDocument/Thumbnails.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/OpenDocument/WriterPart.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/PDF.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/PDF/Core.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/PDF/DomPDF.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/PDF/mPDF.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/Writer/PDF/tcPDF.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/bg/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/cs/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/cs/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/da/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/da/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/de/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/de/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/en/uk/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/es/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/es/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/fi/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/fi/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/fr/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/fr/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/hu/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/hu/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/it/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/it/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/nl/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/nl/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/no/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/no/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/pl/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/pl/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/pt/br/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/pt/br/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/pt/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/pt/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/ru/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/ru/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/sv/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/sv/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/tr/config" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Classes/PHPExcel/locale/tr/functions" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/01pharSimple.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/01simple-download-ods.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/01simple-download-pdf.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/01simple-download-xls.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/01simple-download-xlsx.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/01simple.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/01simplePCLZip.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/02types-xls.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/02types.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/03formulas.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/04printing.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/05featuredemo.inc.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/05featuredemo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/06largescale-with-cellcaching-sqlite.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/06largescale-with-cellcaching-sqlite3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/06largescale-with-cellcaching.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/06largescale-xls.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/06largescale.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/07reader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/07readerPCLZip.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/08conditionalformatting.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/08conditionalformatting2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/09pagebreaks.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/10autofilter-selection-1.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/10autofilter-selection-2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/10autofilter-selection-display.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/10autofilter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/11documentsecurity-xls.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/11documentsecurity.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/12cellProtection.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/13calculation.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/13calculationCyclicFormulae.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/14excel5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/15datavalidation-xls.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/15datavalidation.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/16csv.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/17html.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/18extendedcalculation.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/19namedrange.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/20readexcel5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/21pdf.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/22heavilyformatted.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/23sharedstyles.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/24readfilter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/25inmemoryimage.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/26utf8.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/27imagesexcel5.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/28iterator.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/29advancedvaluebinder.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/30template.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/31docproperties_write-xls.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/31docproperties_write.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/32chartreadwrite.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/33chartcreate-area.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/33chartcreate-bar-stacked.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/33chartcreate-bar.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/33chartcreate-column-2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/33chartcreate-column.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/33chartcreate-composite.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/33chartcreate-line.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/33chartcreate-multiple-charts.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/33chartcreate-pie.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/33chartcreate-radar.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/33chartcreate-scatter.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/33chartcreate-stock.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/34chartupdate.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/35chartrender.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/36chartreadwriteHTML.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/36chartreadwritePDF.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/37page_layout_view.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/38cloneWorksheet.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/39dropdown.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/40duplicateStyle.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/41password.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/42richText.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/43mergeWorkbooks.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/44worksheetInfo.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/Excel2003XMLReader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/Excel2003XMLTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/GnumericReader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/GnumericTest.gnumeric" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/OOCalcReader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/OOCalcReaderPCLZip.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/OOCalcTest.ods" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/Quadratic.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/Quadratic2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/SylkReader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/SylkTest.slk" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/XMLReader.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/XMLTest.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/data/continents/Africa.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/data/continents/Asia.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/data/continents/Europe.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/data/continents/North America.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/data/continents/Oceania.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/data/continents/South America.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/images/paid.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/images/phpexcel_logo.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Examples/runall.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/composer.phar" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/composer.json" afterPath="$PROJECT_DIR$/composer.json" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -28,21 +383,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Excel2007.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/PHPExcel/Writer/Excel2007.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3281">
-              <caret line="193" column="13" lean-forward="false" selection-start-line="193" selection-start-column="13" selection-end-line="193" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/composer.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="68">
+              <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -78,8 +423,8 @@
       <list>
         <option value="$PROJECT_DIR$/composer.lock" />
         <option value="$PROJECT_DIR$/Classes/PHPExcel/Autoloader.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/execute.php" />
+        <option value="$PROJECT_DIR$/composer.json" />
       </list>
     </option>
   </component>
@@ -146,6 +491,11 @@
               <item name="GiradaStormBot" type="b2602c69:ProjectViewProjectNode" />
               <item name="GiradaStormBot" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="vendor" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="GiradaStormBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GiradaStormBot" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="composer.phar" type="f7f5664e:PsiPharFileNode" />
             </path>
           </expand>
           <select />
@@ -222,13 +572,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="20193000" />
+    <option name="totallyTimeSpent" value="20354000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24304539" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -502,8 +851,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="68">
+          <caret line="4" column="3" lean-forward="false" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
           <folding />
         </state>
       </provider>
