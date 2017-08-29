@@ -141,8 +141,8 @@ elseif(strcmp($text, "/listaprezzo") === 0)
 }
 elseif(strcmp($text, "/ordina") === 0)
 {
-<<<<<<< HEAD
     $response = "";
+
     // Get the API client and construct the service object.
     $client = getClient();
     $service = new Google_Service_Sheets($client);
@@ -162,23 +162,6 @@ elseif(strcmp($text, "/ordina") === 0)
     }
 
 	$parameters = array('chat_id' => $chatId, "text" => $response);
-=======
-    // Create new PHPExcel object
-    $objPHPExcel = new PHPExcel();
-
-    // Add some data
-    $objPHPExcel->setActiveSheetIndex(0)
-        ->setCellValue('A1', 'Hello')
-        ->setCellValue('B2', 'world!')
-        ->setCellValue('C1', 'Hello')
-        ->setCellValue('D2', 'world!');
-
-    // Save Excel 2007 file
-    $objWriter = PHPExcel_IOFactory::createWriter($objPHPExcel, 'Excel2007');
-    $objWriter->save('aa.xlsx');
-
-	$parameters = array('chat_id' => $chatId, "text" => "qui ordiniamo aaaaaaaaaaaa");
->>>>>>> ae076fc35c7a89d3e870815bd91238274c5ba588
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);	
 }
