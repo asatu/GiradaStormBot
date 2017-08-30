@@ -72,20 +72,20 @@ if(strcmp($text, "/start") === 0)
 }
 elseif(strcmp($text, "/lista") === 0)
 {
-    /**
+
     $spreadsheet_range = 'Foglio1!A1:A1';
     putenv('GOOGLE_APPLICATION_CREDENTIALS=' . $service_account_file);
     $client = new Google_Client();
     $client->useApplicationDefaultCredentials();
-    $client->addScope(Google_Service_Sheets::SPREADSHEETS);
-    $service = new Google_Service_Sheets($client);
-    $result = $service->spreadsheets_values->get($spreadsheet_id, $spreadsheet_range);
+    $client->addScope(Google_Service_Drive::DRIVE_METADATA_READONLY);
+    $service = new Google_Service_Drive($client);
+    /**   $result = $service->spreadsheets_values->get($spreadsheet_id, $spreadsheet_range);
     $response = $result->getValues()[0][0];
     */
-    
-    $response = $driveService->files->export($spreadsheet_id, 'application/pdf');
+
+    $response = $service->files->export($spreadsheet_id, 'application/pdf');
     $content = $response->getBody()->getContents();
-	$parameters = array('chat_id' => $chatId, "text" => $content);
+	$parameters = array('chat_id' => $chatId, "text" => "response: " . $response . " - content:" . $content);
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);	
 }
