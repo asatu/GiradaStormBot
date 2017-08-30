@@ -77,7 +77,7 @@ elseif(strcmp($text, "/lista") === 0)
     putenv('GOOGLE_APPLICATION_CREDENTIALS=' . $service_account_file);
     $client = new Google_Client();
     $client->useApplicationDefaultCredentials();
-    $client->addScope(Google_Service_Drive::DRIVE_METADATA_READONLY);
+    $client->addScope(Google_Service_Drive::DRIVE_READONLY);
     $service = new Google_Service_Drive($client);
     /**   $result = $service->spreadsheets_values->get($spreadsheet_id, $spreadsheet_range);
     $response = $result->getValues()[0][0];
