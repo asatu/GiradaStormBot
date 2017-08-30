@@ -83,7 +83,7 @@ elseif(strcmp($text, "/lista") === 0)
     $response = $result->getValues()[0][0];
     */
 
-    $response = $service->files->export($spreadsheet_id, 'application/pdf');
+    $response = $service->files->export($spreadsheet_id, 'application/vnd.ms-excel');
     $content = $response->getBody()->getContents();
 	$parameters = array('chat_id' => $chatId, "text" => "response: " . json_encode($response) . " - content:" . $content);
 	$parameters["method"] = "sendMessage";
