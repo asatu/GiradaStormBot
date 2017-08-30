@@ -25,6 +25,8 @@ echo $spreadsheet_id;
  *
  * @see https://developers.google.com/sheets/api/guides/concepts#a1_notation
  */
+
+/**
     $spreadsheet_range = 'Foglio1!A1:A1';
     putenv('GOOGLE_APPLICATION_CREDENTIALS=' . $service_account_file);
     $client = new Google_Client();
@@ -33,3 +35,20 @@ echo $spreadsheet_id;
     $service = new Google_Service_Sheets($client);
     $result = $service->spreadsheets_values->get($spreadsheet_id, $spreadsheet_range);
     var_dump($result->getValues());
+ * */
+
+$spreadsheet_range = 'Foglio1!A1:A1';
+putenv('GOOGLE_APPLICATION_CREDENTIALS=' . $service_account_file);
+$client = new Google_Client();
+$client->useApplicationDefaultCredentials();
+$client->addScope(Google_Service_Drive::DRIVE_READONLY);
+$service = new Google_Service_Drive($client);
+/**   $result = $service->spreadsheets_values->get($spreadsheet_id, $spreadsheet_range);
+$response = $result->getValues()[0][0];
+ */
+
+$response = $service->files->export($spreadsheet_id, 'application/pdf');
+
+$content = $response->getBody()->getContents();
+echo "content:" . json_encode($content);
+
