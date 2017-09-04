@@ -12,7 +12,7 @@ class Markups
 {
     public static function getHomeMenu()
     {
-        $home_markup = new InlineKeyboardMarkup([
+        $home_markup = [
             'inline_keyboard' => [
                 [
                     new InlineKeyboardButton(["text" => Emoticons::getEmojiPointRight() . "    Mettiti in Lista    " . Emoticons::getEmojiPointRight(), "callback_data" => "/ordina"])
@@ -28,7 +28,7 @@ class Markups
                         new InlineKeyboardButton(["text" => Emoticons::getEmojiIphone() . "    Entra in Lista iPhone 8    " . Emoticons::getEmojiIphone(), "callback_data" => "/ordinaiphone"])
                 ]
             ]
-        ]);
+        ];
 
         return json_encode($home_markup);
     }
