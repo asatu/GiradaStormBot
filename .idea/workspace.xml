@@ -30,8 +30,8 @@
       <file leaf-file-name="markups.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/classes/markups.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="40" column="20" lean-forward="false" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+            <state relative-caret-position="119">
+              <caret line="20" column="168" lean-forward="false" selection-start-line="20" selection-start-column="168" selection-end-line="20" selection-end-column="168" />
               <folding />
             </state>
           </provider>
@@ -197,7 +197,7 @@
       <workItem from="1504039707108" duration="1920000" />
       <workItem from="1504074997299" duration="3200000" />
       <workItem from="1504532954654" duration="4638000" />
-      <workItem from="1504539213678" duration="8761000" />
+      <workItem from="1504539213678" duration="9078000" />
     </task>
     <task id="LOCAL-00001" summary="Integrazione google">
       <created>1503993940998</created>
@@ -210,7 +210,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46901000" />
+    <option name="totallyTimeSpent" value="47218000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -526,8 +526,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/classes/markups.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="40" column="20" lean-forward="false" selection-start-line="40" selection-start-column="20" selection-end-line="40" selection-end-column="20" />
+        <state relative-caret-position="119">
+          <caret line="20" column="168" lean-forward="false" selection-start-line="20" selection-start-column="168" selection-end-line="20" selection-end-column="168" />
           <folding />
         </state>
       </provider>

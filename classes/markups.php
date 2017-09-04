@@ -18,7 +18,7 @@ class Markups
                     array("text" => Emoticons::getEmojiPointRight() . "    Mettiti in Lista    " . Emoticons::getEmojiPointRight(), "callback_data" => "/ordina")
                 ),
                 array(
-                    array("text" => Emoticons::getEmojiList() . "    Lista Completa    " . Emoticons::getEmojiList(), "callback_data" => "/lista")
+                    array("text" => Emoticons::getEmojiList() . "    Lista Completa    " . Emoticons::getEmojiList(), "url" => "http://giradastorm.altervista.org/lista")
                 ),
                 array(
                     array("text" => Emoticons::getEmojiList() . "    Lista per Prezzo    " . Emoticons::getEmojiList(), "callback_data" => "/listaprezzo")
