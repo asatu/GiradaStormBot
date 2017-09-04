@@ -1,6 +1,6 @@
 <?php
 
-$mysqli = new mysqli('http://giradastorm.altervista.org/', 'giradastorm', 'doktefagpu80', 'my_giradastorm');
+$mysqli = new mysqli('https://s338.altervista.org/', 'giradastorm', 'doktefagpu80', 'my_giradastorm');
 if ($mysqli->connect_errno) {
     // The connection failed. What do you want to do?
     // You could contact yourself (email?), log the error, show a nice page, etc.
