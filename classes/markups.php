@@ -35,16 +35,16 @@ class Markups
 
     public static function getListMenu()
     {
-        $list_markup = array(
-            'inline_keyboard' => array(
-                array(
-                    array("text" => "    Visualizza lista aggiornata    ", "url" => "http://giradastorm.altervista.org/lista")
-                ),
-                array(
-                    array("text" => Emoticons::getEmojiList() . "    Indietro    " . Emoticons::getEmojiList(), "callback_data" => "/lista")
-                )
-            )
-        );
+        $list_markup = [
+            'inline_keyboard' => [
+                [
+                    ["text" => "    Visualizza lista aggiornata    ", "url" => "http://giradastorm.altervista.org/lista"]
+                ],
+                [
+                    ["text" => Emoticons::getEmojiList() . "    Indietro    " . Emoticons::getEmojiList(), "callback_data" => "/home"]
+                ]
+            ]
+        ];
 
         return json_encode($list_markup);
     }

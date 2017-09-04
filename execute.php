@@ -39,7 +39,7 @@ if(strcmp($text, "/start") === 0)
 }
 elseif(strcmp($text, "/lista") === 0)
 {
-	$parameters = array('chat_id' => $chatId, "text" => "cccc", "reply_markup" => Markups::getListMenu());
+	$parameters = array('chat_id' => $chatId, "text" => $content, "reply_markup" => Markups::getListMenu());
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);	
 }
@@ -56,6 +56,12 @@ elseif(strcmp($text, "/ordina") === 0)
 	$parameters = array('chat_id' => $chatId, "text" => $response);
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);	
+}
+elseif(strcmp($text, "/home") === 0)
+{
+    $parameters = array('chat_id' => $chatId, "text" => $content, "reply_markup" => Markups::getHomeMenu());
+    $parameters["method"] = "sendMessage";
+    echo json_encode($parameters);
 }
 
 
