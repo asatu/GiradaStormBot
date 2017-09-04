@@ -6,6 +6,8 @@
  * Time: 00:07
  */
 
+require_once('emoticons.php');
+
 class Markups
 {
     public static function getHomeMenu()

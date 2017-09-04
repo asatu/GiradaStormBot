@@ -1,5 +1,7 @@
 <?php
 
+require_once('classes/markups.php');
+
 $content = file_get_contents("php://input");
 $request = json_decode($content, false);
 if(!$request)
