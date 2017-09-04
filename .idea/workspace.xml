@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f131ca8-f089-4ce4-b44a-c1278cf33c86" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/emoticons.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/classes/markups.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/execute.php" afterPath="$PROJECT_DIR$/execute.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,8 +23,28 @@
       <file leaf-file-name="execute.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/execute.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="65" column="16" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+            <state relative-caret-position="289">
+              <caret line="38" column="1" lean-forward="false" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="markups.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/markups.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="229">
+              <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="emoticons.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/classes/emoticons.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -51,6 +74,8 @@
         <option value="$PROJECT_DIR$/_test.php" />
         <option value="$PROJECT_DIR$/../GiradaStormApi/api/list/create.php" />
         <option value="$PROJECT_DIR$/_test2.php" />
+        <option value="$PROJECT_DIR$/classes/emoticons.php" />
+        <option value="$PROJECT_DIR$/classes/markups.php" />
         <option value="$PROJECT_DIR$/execute.php" />
       </list>
     </option>
@@ -114,6 +139,11 @@
             <path>
               <item name="GiradaStormBot" type="b2602c69:ProjectViewProjectNode" />
               <item name="GiradaStormBot" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="GiradaStormBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="GiradaStormBot" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="classes" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -180,7 +210,7 @@
       <workItem from="1504039707108" duration="1920000" />
       <workItem from="1504074997299" duration="3200000" />
       <workItem from="1504532954654" duration="4638000" />
-      <workItem from="1504539213678" duration="6082000" />
+      <workItem from="1504539213678" duration="8201000" />
     </task>
     <task id="LOCAL-00001" summary="Integrazione google">
       <created>1503993940998</created>
@@ -193,7 +223,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="44222000" />
+    <option name="totallyTimeSpent" value="46341000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -238,14 +268,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/execute.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1462">
-          <caret line="86" column="51" lean-forward="false" selection-start-line="75" selection-start-column="4" selection-end-line="86" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/_test.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -499,10 +521,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/classes/emoticons.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="22" column="41" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/classes/markups.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="33" column="38" lean-forward="false" selection-start-line="33" selection-start-column="27" selection-end-line="33" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/execute.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="65" column="16" lean-forward="true" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
+        <state relative-caret-position="289">
+          <caret line="38" column="1" lean-forward="false" selection-start-line="38" selection-start-column="1" selection-end-line="38" selection-end-column="1" />
           <folding />
         </state>
       </provider>
