@@ -53,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/_test2.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
-              <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+              <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -243,7 +243,7 @@
       <workItem from="1504039707108" duration="1920000" />
       <workItem from="1504074997299" duration="3200000" />
       <workItem from="1504532954654" duration="4638000" />
-      <workItem from="1504539213678" duration="4039000" />
+      <workItem from="1504539213678" duration="4107000" />
     </task>
     <task id="LOCAL-00001" summary="Integrazione google">
       <created>1503993940998</created>
@@ -256,7 +256,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42179000" />
+    <option name="totallyTimeSpent" value="42247000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -565,7 +565,7 @@
     <entry file="file://$PROJECT_DIR$/_test2.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
-          <caret line="18" column="66" lean-forward="false" selection-start-line="18" selection-start-column="66" selection-end-line="18" selection-end-column="66" />
+          <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
           <folding />
         </state>
       </provider>
