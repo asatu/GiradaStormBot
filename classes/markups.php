@@ -13,21 +13,21 @@ class Markups
     public static function getHomeMenu()
     {
         $home_markup = [
-            'inline_keyboard' => [
+            'inline_keyboard' => new InlineKeyboard([
                 [
-                    ["text" => Emoticons::getEmojiPointRight() . "    Mettiti in Lista    " . Emoticons::getEmojiPointRight(), "callback_data" => "/ordina"]
+                    new InlineKeyboardButton(["text" => Emoticons::getEmojiPointRight() . "    Mettiti in Lista    " . Emoticons::getEmojiPointRight(), "callback_data" => "/ordina"])
                 ],
                 [
-                    ["text" => Emoticons::getEmojiList() . "    Lista Completa    " . Emoticons::getEmojiList(), "url" => "http://giradastorm.altervista.org/lista"]
+                    new InlineKeyboardButton(["text" => Emoticons::getEmojiList() . "    Lista Completa    " . Emoticons::getEmojiList(), "url" => "http://giradastorm.altervista.org/lista"])
                 ],
                 [
-                    ["text" => Emoticons::getEmojiList() . "    Lista per Prezzo    " . Emoticons::getEmojiList(), "callback_data" => "/listaprezzo"]
+                    new InlineKeyboardButton(["text" => Emoticons::getEmojiList() . "    Lista per Prezzo    " . Emoticons::getEmojiList(), "callback_data" => "/listaprezzo"])
                 ],
                 [
-                    ["text" => Emoticons::getEmojiIphone() . "    Lista iPhone 8    " . Emoticons::getEmojiIphone(), "callback_data" => "/listaiphone"],
-                    ["text" => Emoticons::getEmojiIphone() . "    Entra in Lista iPhone 8    " . Emoticons::getEmojiIphone(), "callback_data" => "/ordinaiphone"]
+                    new InlineKeyboardButton(["text" => Emoticons::getEmojiIphone() . "    Lista iPhone 8    " . Emoticons::getEmojiIphone(), "callback_data" => "/listaiphone"]),
+                        new InlineKeyboardButton(["text" => Emoticons::getEmojiIphone() . "    Entra in Lista iPhone 8    " . Emoticons::getEmojiIphone(), "callback_data" => "/ordinaiphone"])
                 ]
-            ]
+            ])
         ];
 
         return json_encode($home_markup);
