@@ -38,7 +38,7 @@ class Markups
         $list_markup = array(
             'inline_keyboard' => array(
                 array(
-                    array("text" => "    Visualizza lista aggiornata    ", "url" => "http://giradastorm.altervista.org/lista")
+                    new InlineKeyboardButton(array("text" => "    Visualizza lista aggiornata    ", "url" => "http://giradastorm.altervista.org/lista"))
                 ),
                 array(
                     array("text" => Emoticons::getEmojiList() . "    Indietro    " . Emoticons::getEmojiList(), "callback_data" => "/lista")
