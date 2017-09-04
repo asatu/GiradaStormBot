@@ -11,7 +11,8 @@ $curl_post_data = array(
     'prezzo' => '100',
     'codiceutilizzato' => '2222222',
     'amicitrovati' => 2,
-    'data' => '2017-09-03'
+    'data' => '2017-09-03',
+    'statoordine' => 'Pending'
 );
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);

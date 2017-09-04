@@ -52,8 +52,8 @@
       <file leaf-file-name="_test2.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/_test2.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+            <state relative-caret-position="238">
+              <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -62,14 +62,14 @@
       <file leaf-file-name="create.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/../GiradaStormApi/api/list/create.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="69" lean-forward="false" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
+            <state relative-caret-position="323">
+              <caret line="19" column="175" lean-forward="false" selection-start-line="19" selection-start-column="175" selection-end-line="19" selection-end-column="175" />
               <folding>
-                <marker date="1504542521838" expanded="true" signature="670:808" ph="INSERT INTO gs_lista... " />
-                <marker date="1504542521838" expanded="true" signature="670:810" ph="INSERT INTO gs_lista... " />
-                <marker date="1504542521838" expanded="true" signature="670:827" ph="INSERT INTO gs_lista... " />
-                <marker date="1504542521838" expanded="true" signature="670:828" ph="INSERT INTO gs_lista... " />
-                <marker date="1504542521838" expanded="true" signature="670:981" ph="INSERT INTO gs_lista... " />
+                <marker date="1504543784581" expanded="true" signature="670:810" ph="INSERT INTO gs_lista... " />
+                <marker date="1504543784581" expanded="true" signature="670:812" ph="INSERT INTO gs_lista... " />
+                <marker date="1504543784581" expanded="true" signature="670:829" ph="INSERT INTO gs_lista... " />
+                <marker date="1504543784581" expanded="true" signature="670:830" ph="INSERT INTO gs_lista... " />
+                <marker date="1504543784581" expanded="true" signature="670:1005" ph="INSERT INTO gs_lista... " />
               </folding>
             </state>
           </provider>
@@ -243,7 +243,7 @@
       <workItem from="1504039707108" duration="1920000" />
       <workItem from="1504074997299" duration="3200000" />
       <workItem from="1504532954654" duration="4638000" />
-      <workItem from="1504539213678" duration="4107000" />
+      <workItem from="1504539213678" duration="4561000" />
     </task>
     <task id="LOCAL-00001" summary="Integrazione google">
       <created>1503993940998</created>
@@ -256,7 +256,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42247000" />
+    <option name="totallyTimeSpent" value="42701000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -550,22 +550,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/../GiradaStormApi/api/list/create.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="69" lean-forward="false" selection-start-line="24" selection-start-column="69" selection-end-line="24" selection-end-column="69" />
+        <state relative-caret-position="323">
+          <caret line="19" column="175" lean-forward="false" selection-start-line="19" selection-start-column="175" selection-end-line="19" selection-end-column="175" />
           <folding>
-            <marker date="1504542521838" expanded="true" signature="670:808" ph="INSERT INTO gs_lista... " />
-            <marker date="1504542521838" expanded="true" signature="670:810" ph="INSERT INTO gs_lista... " />
-            <marker date="1504542521838" expanded="true" signature="670:827" ph="INSERT INTO gs_lista... " />
-            <marker date="1504542521838" expanded="true" signature="670:828" ph="INSERT INTO gs_lista... " />
-            <marker date="1504542521838" expanded="true" signature="670:981" ph="INSERT INTO gs_lista... " />
+            <marker date="1504543784581" expanded="true" signature="670:810" ph="INSERT INTO gs_lista... " />
+            <marker date="1504543784581" expanded="true" signature="670:812" ph="INSERT INTO gs_lista... " />
+            <marker date="1504543784581" expanded="true" signature="670:829" ph="INSERT INTO gs_lista... " />
+            <marker date="1504543784581" expanded="true" signature="670:830" ph="INSERT INTO gs_lista... " />
+            <marker date="1504543784581" expanded="true" signature="670:1005" ph="INSERT INTO gs_lista... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/_test2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="40" lean-forward="false" selection-start-line="18" selection-start-column="40" selection-end-line="18" selection-end-column="40" />
+        <state relative-caret-position="238">
+          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
           <folding />
         </state>
       </provider>
