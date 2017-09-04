@@ -11,17 +11,20 @@ if(!$request)
 
 header("Content-Type: application/json");
 
+$updateId = $request->update_id;
 if ($request->callback_query != null) 
 {
 	$firstname = $request->callback_query->message->chat->first_name;
 	$chatId = $request->callback_query->message->chat->id;
 	$text = $request->callback_query->data;
+    $request->callback_query->message->entities[0]->offset = $updateId + 1;
 }
 else
 {
 	$firstname = $request->message->chat->first_name;
 	$chatId = $request->message->chat->id;
 	$text = $request->message->text;
+    $request->message->entities[0]->offset = $updateId + 1;
 }
 
 if(strcmp($text, "/start") === 0)
