@@ -63,7 +63,7 @@ if(strcmp($text, "/start") === 0)
 }
 elseif(strcmp($text, "/lista") === 0)
 {
-    $list_url = "http://giradastorm.altervista.org/lista";
+    $list_url = urlencode("http://giradastorm.altervista.org/lista");
 
 	$parameters = array('chat_id' => $chatId, "text" => json_encode($list_url));
 	$parameters["method"] = "sendMessage";
