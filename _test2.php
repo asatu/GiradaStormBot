@@ -16,7 +16,7 @@ $curl_post_data = array(
 
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 curl_setopt($curl, CURLOPT_POST, true);
-curl_setopt($curl, CURLOPT_POSTFIELDS, $curl_post_data);
+curl_setopt($curl, CURLOPT_POSTFIELDS, son_encode($curl_post_data));
 $curl_response = curl_exec($curl);
 if ($curl_response === false) {
     $info = curl_getinfo($curl);
