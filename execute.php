@@ -1,10 +1,5 @@
 <?php
 
-require_once dirname(__FILE__) . '/vendor/autoload.php';
-
-$service_account_file = dirname(__FILE__) . '/giradastormbot.json';
-$spreadsheet_id = '1OpkvFJRzxZ2lxv_CPV1akNeagaKAGZjTlhRRzxrJbrc';
-
 $content = file_get_contents("php://input");
 $request = json_decode($content, false);
 if(!$request)
@@ -57,10 +52,6 @@ if(strcmp($text, "/start") === 0)
 					array(
 						array("text" => $emoji_iphone."    Lista iPhone 8    ".$emoji_iphone, "callback_data" => "/listaiphone"),
 						array("text" => $emoji_iphone."    Entra in Lista iPhone 8    ".$emoji_iphone, "callback_data" => "/ordinaiphone")
-					),
-					array(
-						array("text" => $emoji_android."    Lista Note 8    ".$emoji_android, "callback_data" => "/listanote"),
-						array("text" => $emoji_android."    Entra in Lista Note 8    ".$emoji_android, "callback_data" => "/ordinanote")
 					)
 				)
 			);
@@ -72,20 +63,9 @@ if(strcmp($text, "/start") === 0)
 }
 elseif(strcmp($text, "/lista") === 0)
 {
+    $list_url = "http://giradastorm.altervista.org/lista";
 
-    $spreadsheet_range = 'Foglio1!A1:A1';
-    putenv('GOOGLE_APPLICATION_CREDENTIALS=' . $service_account_file);
-    $client = new Google_Client();
-    $client->useApplicationDefaultCredentials();
-    $client->addScope(Google_Service_Drive::DRIVE_READONLY);
-    $service = new Google_Service_Drive($client);
-    /**   $result = $service->spreadsheets_values->get($spreadsheet_id, $spreadsheet_range);
-    $response = $result->getValues()[0][0];
-    */
-
-    $response = $service->files->export($spreadsheet_id, 'application/vnd.ms-excel');
-    $content = $response->getBody()->getContents();
-	$parameters = array('chat_id' => $chatId, "text" => "response: " . json_encode($response) . " - content:" . $content);
+	$parameters = array('chat_id' => $chatId, "text" => json_encode($list_url));
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);	
 }

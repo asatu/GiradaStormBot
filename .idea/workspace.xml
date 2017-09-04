@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6f131ca8-f089-4ce4-b44a-c1278cf33c86" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/_test2.php" afterPath="$PROJECT_DIR$/_test2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/execute.php" afterPath="$PROJECT_DIR$/execute.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,60 +17,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="read.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../GiradaStormApi/api/list/read.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding>
-                <marker date="1504538847281" expanded="true" signature="372:428" ph="SELECT Nome gs_lista" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="execute.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="execute.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/execute.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="40" />
+            <state relative-caret-position="236">
+              <caret line="71" column="27" lean-forward="false" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_test.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/_test.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="74" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="74" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="_test2.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/_test2.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="create.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../GiradaStormApi/api/list/create.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="175" lean-forward="false" selection-start-line="19" selection-start-column="175" selection-end-line="19" selection-end-column="175" />
-              <folding>
-                <marker date="1504543784581" expanded="true" signature="670:810" ph="INSERT INTO gs_lista... " />
-                <marker date="1504543784581" expanded="true" signature="670:812" ph="INSERT INTO gs_lista... " />
-                <marker date="1504543784581" expanded="true" signature="670:829" ph="INSERT INTO gs_lista... " />
-                <marker date="1504543784581" expanded="true" signature="670:830" ph="INSERT INTO gs_lista... " />
-                <marker date="1504543784581" expanded="true" signature="670:1005" ph="INSERT INTO gs_lista... " />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -96,10 +48,10 @@
         <option value="$PROJECT_DIR$/composer.lock" />
         <option value="$PROJECT_DIR$/Classes/PHPExcel/Autoloader.php" />
         <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/execute.php" />
         <option value="$PROJECT_DIR$/_test.php" />
         <option value="$PROJECT_DIR$/../GiradaStormApi/api/list/create.php" />
         <option value="$PROJECT_DIR$/_test2.php" />
+        <option value="$PROJECT_DIR$/execute.php" />
       </list>
     </option>
   </component>
@@ -133,7 +85,7 @@
       <path value="$PROJECT_DIR$/vendor/psr/cache" />
     </include_path>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="11" />
     <option name="y" value="26" />
     <option name="width" value="1346" />
@@ -162,21 +114,6 @@
             <path>
               <item name="GiradaStormBot" type="b2602c69:ProjectViewProjectNode" />
               <item name="GiradaStormBot" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="GiradaStormBot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GiradaStormApi" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="GiradaStormBot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GiradaStormApi" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="GiradaStormBot" type="b2602c69:ProjectViewProjectNode" />
-              <item name="GiradaStormApi" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="api" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="list" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -243,7 +180,7 @@
       <workItem from="1504039707108" duration="1920000" />
       <workItem from="1504074997299" duration="3200000" />
       <workItem from="1504532954654" duration="4638000" />
-      <workItem from="1504539213678" duration="4561000" />
+      <workItem from="1504539213678" duration="5392000" />
     </task>
     <task id="LOCAL-00001" summary="Integrazione google">
       <created>1503993940998</created>
@@ -256,10 +193,10 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="42701000" />
+    <option name="totallyTimeSpent" value="43532000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23645681" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -522,32 +459,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/_test.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="74" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/execute.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="8" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../GiradaStormApi/api/list/read.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <marker date="1504538847281" expanded="true" signature="372:428" ph="SELECT Nome gs_lista" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../GiradaStormApi/api/list/create.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -564,8 +475,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/_test2.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        <state relative-caret-position="323">
+          <caret line="19" column="49" lean-forward="false" selection-start-line="19" selection-start-column="49" selection-end-line="19" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/_test.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="74" lean-forward="true" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="74" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../GiradaStormApi/api/list/read.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
+          <folding>
+            <marker date="1504538847281" expanded="true" signature="372:428" ph="SELECT Nome gs_lista" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/execute.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="236">
+          <caret line="71" column="27" lean-forward="false" selection-start-line="71" selection-start-column="27" selection-end-line="71" selection-end-column="27" />
           <folding />
         </state>
       </provider>
