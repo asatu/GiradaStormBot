@@ -76,19 +76,26 @@ elseif(strcmp($text, "/ordina") === 0)
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);
 }
-elseif(strcmp($text, "/home") === 0)
+ * */
+elseif(strcmp($input, "/home") === 0)
 {
-    $response = "Seleziona un azione";
-    $parameters = array('chat_id' => $chatId, "text" => $response, "reply_markup" => Markups::showHomeMenu());
-    $parameters["method"] = "sendMessage";
-    echo json_encode($parameters);
+    $text = "Seleziona un azione";
+
+    $response = $telegram->sendMessage([
+        'chat_id' => $chatId,
+        'text' => $text,
+        'reply_markup' => Markups::showHomeMenu()
+    ]);
 }
-elseif(strcmp($text, "Annulla") === 0)
+elseif(strcmp($input, "Annulla") === 0)
 {
-    $response = "Annullato";
-    $parameters = array('chat_id' => $chatId, "text" => $response, "reply_markup" => Markups::removeMenu());
-    $parameters["method"] = "sendMessage";
-    echo json_encode($parameters);
+    $text = "Annullato";
+
+    $response = $telegram->sendMessage([
+        'chat_id' => $chatId,
+        'text' => $text,
+        'reply_markup' => Markups::removeMenu()
+    ]);
 }
-*/
+
 
