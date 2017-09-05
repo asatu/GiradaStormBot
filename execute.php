@@ -8,21 +8,9 @@ use Telegram\Bot\Api;
 
 $telegram = new Api(TelegramConfig::BOT_TOKEN);
 
-
 $request = $telegram->getWebhookUpdates();
 
 
-
-/**
-$content = file_get_contents("php://input");
-$request = json_decode($content, false);
-if(!$request)
-{
-  exit;
-}
-
-header("Content-Type: application/json");
-*/
 $updateId = $request->getUpdateId();
 /**
 if ($request->callback_query != null)
@@ -52,12 +40,6 @@ if(strcmp($input, "/start") === 0)
 		."è quello di offrire gratuitamente un aiuto agli utenti per trovare nel minor tempo possibile i 3 amici necessari per ottenere il massimo sconto. "
 		."Non siamo quindi responsabili nè dell'ordine nè del prodotto acquistato, per i quali potrai contattare direttamente Girada.";
 
-	/**
-	$parameters = [  "reply_markup" => Markups::showHomeMenu()];
-	$parameters["method"] = "sendMessage";
-	echo json_encode($parameters);
-     * */
-
     $response = $telegram->sendMessage([
         'chat_id' => $chatId,
         'text' => $text,
@@ -65,14 +47,17 @@ if(strcmp($input, "/start") === 0)
         'reply_markup' => Markups::showHomeMenu()
     ]);
 }
-/**
-elseif(strcmp($text, "/lista") === 0)
+elseif(strcmp($input, "/lista") === 0)
 {
-    $response = "Visualizza la lista aggiornata";
-	$parameters = array('chat_id' => $chatId, "text" => $response, "reply_markup" => Markups::showListMenu());
-	$parameters["method"] = "sendMessage";
-	echo json_encode($parameters);	
+    $text = "Visualizza la lista aggiornata";
+
+    $response = $telegram->sendMessage([
+        'chat_id' => $chatId,
+        'text' => $text,
+        'reply_markup' => Markups::showListMenu()
+    ]);
 }
+/**
 elseif(strcmp($text, "/listaprezzo") === 0)
 {
 	$parameters = array('chat_id' => $chatId, "text" => "qui scarichiamo la lista per prezzo aaaaaaaaaaaa");
