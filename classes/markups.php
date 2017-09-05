@@ -51,7 +51,7 @@ class Markups
 
     public static function getCancelMenu()
     {
-        $order_markup = [["remove_keyboard" => true]];
+        $order_markup = [ "keyboard" => ["remove_keyboard" => true]];
 
         return json_encode($order_markup);
     }
