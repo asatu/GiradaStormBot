@@ -49,15 +49,9 @@ class Markups
         return json_encode($list_markup);
     }
 
-    public static function getOrdinaMenu()
+    public static function getCancelMenu()
     {
-        $order_markup = [
-            'reply_keyboard' => [
-                [
-                    ["remove_keyboard" => true]
-                ]
-            ]
-        ];
+        $order_markup = ["remove_keyboard" => true];
 
         return json_encode($order_markup);
     }

@@ -61,7 +61,7 @@ elseif(strcmp($text, "/ordina") === 0)
         ."\n"
         ."Adesso inserisci il *nome*, senza cognome:";
 
-	$parameters = ['chat_id' => $chatId, "text" => $response, "parse_mode" => "Markdown", "reply_markup" => Markups::getOrdinaMenu()];
+	$parameters = ['chat_id' => $chatId, "text" => $response, "parse_mode" => "Markdown", "reply_markup" => Markups::getCancelMenu()];
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);
 /**
