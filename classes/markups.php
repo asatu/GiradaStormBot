@@ -38,10 +38,10 @@ class Markups
         $list_markup = [
             'inline_keyboard' => [
                 [
-                    ["text" => "    Visualizza lista aggiornata    ", "url" => "http://giradastorm.altervista.org/lista"]
+                    ["text" => Emoticons::getEmojiList() . "    Vai alla lista aggiornata    " . Emoticons::getEmojiList(), "url" => "http://giradastorm.altervista.org/lista"]
                 ],
                 [
-                    ["text" => Emoticons::getEmojiList() . "    Indietro    " . Emoticons::getEmojiList(), "callback_data" => "/home"]
+                    ["text" => Emoticons::getEmojiBack() . "    Indietro    ", "callback_data" => "/home"]
                 ]
             ]
         ];

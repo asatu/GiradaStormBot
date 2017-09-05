@@ -27,4 +27,8 @@ class Emoticons
     public static function getEmojiAndroid() {
         return json_decode('"\ud83d\udc7e"');
     }
+
+    public static function getEmojiBack() {
+        return json_decode('"\ud83d\udd19"');
+    }
 }
