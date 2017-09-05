@@ -27,7 +27,9 @@ else
     $request->message->entities[0]->offset = $updateId + 1;
 }
 
-echo json_encode($content);
+$parameters2 = array('chat_id' => $chatId, "text" => $content);
+$parameters2["method"] = "sendMessage";
+echo json_encode($parameters2);
 
 if(strcmp($text, "/start") === 0)
 {
