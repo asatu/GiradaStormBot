@@ -11,8 +11,6 @@ if(!$request)
 
 header("Content-Type: application/json");
 
-echo $content;
-
 $updateId = $request->update_id;
 if ($request->callback_query != null) 
 {
