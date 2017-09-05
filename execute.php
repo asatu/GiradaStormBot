@@ -20,7 +20,7 @@ if ($request->isType('callback_query'))
     $chat = $message->getChat();
 
 	$first_name = $chat->first_name;
-	$chatId = $chat->id;
+	$chatId = $chat->id; 
 	$input = $callbackQuery->data;
     //$message->entities[0]->offset = $updateId + 1;
 }
