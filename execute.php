@@ -55,23 +55,20 @@ elseif(strcmp($text, "/listaprezzo") === 0)
 }
 elseif(strcmp($text, "/ordina") === 0)
 {
-    $action_parameters = ['chat_id' => $chatId, "action" => "typing"];
-    $action_parameters["method"] = "sendChatAction";
-    echo json_encode($action_parameters);
-
     $response =
         "Verrai guidato passo passo per metterti in lista.\n"
         ."Ricorda che devi fare questi passaggi *prima* di effettuare l'ordine su Girada.\n"
         ."\n"
         ."Adesso inserisci il *nome*, senza cognome:";
 
-	$parameters = ['chat_id' => $chatId, "text" => $response, "parse_mode" => "Markdown"];
+	$parameters = ['chat_id' => $chatId, "text" => $response, "parse_mode" => "Markdown", "reply_markup" => Markups::getOrdinaMenu()];
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);
-
+/**
     $parameters2 = array('chat_id' => $chatId, "text" => "good! Now insert the surname");
     $parameters2["method"] = "sendMessage";
     echo json_encode($parameters2);
+ * */
 }
 elseif(strcmp($text, "/home") === 0)
 {
