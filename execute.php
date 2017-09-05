@@ -38,7 +38,7 @@ if(strcmp($text, "/start") === 0)
 		."è quello di offrire gratuitamente un aiuto agli utenti per trovare nel minor tempo possibile i 3 amici necessari per ottenere il massimo sconto. "
 		."Non siamo quindi responsabili nè dell'ordine nè del prodotto acquistato, per i quali potrai contattare direttamente Girada.";
 
-	$parameters = ['chat_id' => $chatId, "text" => $response, "parse_mode" => "Markdown", "reply_markup" => Markups::getHomeMenu()];
+	$parameters = array('chat_id' => $chatId, "text" => $response, "parse_mode" => "Markdown", "reply_markup" => Markups::getHomeMenu());
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);
 }
