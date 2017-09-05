@@ -12,15 +12,19 @@ $request = $telegram->getWebhookUpdates();
 
 $updateId = $request->getUpdateId();
 
-/**
-if ($request->callback_query != null)
+
+if ($request->isType('callback_query'))
 {
-	$first_name = $request->callback_query->message->chat->first_name;
-	$chatId = $request->callback_query->message->chat->id;
-	$text = $request->callback_query->data;
-    $request->callback_query->message->entities[0]->offset = $updateId + 1;
+    $callbackQuery = $request->getCallbackQuery();
+    $message = $callbackQuery->getMessage();
+    $chat = $message->getChat();
+
+	$first_name = $chat->first_name;
+	$chatId = $chat->id;
+	$input = $callbackQuery->data;
+    //$message->entities[0]->offset = $updateId + 1;
 }
-else*/
+else
 {
     $message = $request->getMessage();
     $chat = $message->getChat();

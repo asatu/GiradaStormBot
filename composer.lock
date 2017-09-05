@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "15e63716db6ef7bb80ccda9c9205d2e2",
+    "content-hash": "ebdedb21cee77792582d282edf1b5c76",
     "packages": [
         {
             "name": "doctrine/inflector",
