@@ -10,8 +10,8 @@ $telegram = new Api(TelegramConfig::BOT_TOKEN);
 
 $request = $telegram->getWebhookUpdates();
 
-
 $updateId = $request->getUpdateId();
+
 /**
 if ($request->callback_query != null)
 {
@@ -30,6 +30,13 @@ else*/
 	$input = $message->getText();
    // $message->entities[0]->offset = $updateId + 1;
 }
+
+
+$response = $telegram->sendMessage([
+    'chat_id' => $chatId,
+    'text' => json_encode( $request)
+]);
+
 
 if(strcmp($input, "/start") === 0)
 {
