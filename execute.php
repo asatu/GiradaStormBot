@@ -69,8 +69,7 @@ elseif(strcmp($text, "/ordina") === 0)
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);
 
-
-    $parameters2 = array('chat_id' => $chatId, "text" => $content);
+    $parameters2 = array('chat_id' => $chatId, "text" => "good! Now insert the surname");
     $parameters2["method"] = "sendMessage";
     echo json_encode($parameters2);
 }
