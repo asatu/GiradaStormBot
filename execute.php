@@ -67,7 +67,7 @@ elseif(strcmp($text, "/ordina") === 0)
 
     $action_parameters = ['chat_id' => $chatId, "action" => "typing"];
     $action_parameters["method"] = "sendChatAction";
-
+    echo json_encode($action_parameters);
 
     $parameters2 = array('chat_id' => $chatId, "text" => $content);
     $parameters2["method"] = "sendMessage";
