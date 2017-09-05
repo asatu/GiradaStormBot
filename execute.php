@@ -8,11 +8,11 @@ use Telegram\Bot\Api;
 
 $telegram = new Api(TelegramConfig::BOT_TOKEN);
 
-$response = $telegram->getMe();
 
-$botId = $response->getId();
-$firstName = $response->getFirstName();
-$username = $response->getUsername();
+$request = $telegram->getWebhookUpdates();
+
+
+
 /**
 $content = file_get_contents("php://input");
 $request = json_decode($content, false);
@@ -22,7 +22,7 @@ if(!$request)
 }
 
 header("Content-Type: application/json");
-
+*/
 $updateId = $request->update_id;
 if ($request->callback_query != null) 
 {
@@ -48,10 +48,18 @@ if(strcmp($text, "/start") === 0)
 		."è quello di offrire gratuitamente un aiuto agli utenti per trovare nel minor tempo possibile i 3 amici necessari per ottenere il massimo sconto. "
 		."Non siamo quindi responsabili nè dell'ordine nè del prodotto acquistato, per i quali potrai contattare direttamente Girada.";
 
+	/**
 	$parameters = ['chat_id' => $chatId, "text" => $response, "parse_mode" => "Markdown", "reply_markup" => Markups::showHomeMenu()];
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);
+     * */
+
+    $response2 = $telegram->sendMessage([
+        'chat_id' => $chatId,
+        'text' => 'Hello World'
+    ]);
 }
+/**
 elseif(strcmp($text, "/lista") === 0)
 {
     $response = "Visualizza la lista aggiornata";
