@@ -77,5 +77,12 @@ elseif(strcmp($text, "/home") === 0)
     $parameters["method"] = "sendMessage";
     echo json_encode($parameters);
 }
+elseif(strcmp($text, "Annulla") === 0)
+{
+    $response = "Annullato";
+    $parameters = array('chat_id' => $chatId, "text" => $response, "reply_markup" => Markups::removeMenu());
+    $parameters["method"] = "sendMessage";
+    echo json_encode($parameters);
+}
 
 

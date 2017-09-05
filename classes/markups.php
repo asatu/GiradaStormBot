@@ -49,12 +49,24 @@ class Markups
         return json_encode($list_markup);
     }
 
-    public static function getCancelMenu()
+    public static function showCancelMenu()
     {
-        $order_markup = [
+        $cancel_markup = [
+            'keyboard' => [
+                    ["Annulla"]
+            ],
+            'resize_keyboard' => true
+        ];
+
+        return json_encode($cancel_markup);
+    }
+
+    public static function removeMenu()
+    {
+        $remove_markup = [
             'remove_keyboard' => true
         ];
 
-        return json_encode($order_markup);
+        return json_encode($remove_markup);
     }
 }
