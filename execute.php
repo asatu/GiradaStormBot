@@ -23,20 +23,24 @@ if(!$request)
 
 header("Content-Type: application/json");
 */
-$updateId = $request->update_id;
-if ($request->callback_query != null) 
+$updateId = $request->getUpdateId();
+/**
+if ($request->callback_query != null)
 {
 	$first_name = $request->callback_query->message->chat->first_name;
 	$chatId = $request->callback_query->message->chat->id;
 	$text = $request->callback_query->data;
     $request->callback_query->message->entities[0]->offset = $updateId + 1;
 }
-else
+else*/
 {
-    $first_name = $request->message->chat->first_name;
-	$chatId = $request->message->chat->id;
-	$text = $request->message->text;
-    $request->message->entities[0]->offset = $updateId + 1;
+    $message = $request->getMessage();
+    $chat = $message->getChat();
+
+    $first_name = $chat->getFirstName();
+	$chatId = $chat->getId();
+	$text = $message->getText();
+   // $message->entities[0]->offset = $updateId + 1;
 }
 
 if(strcmp($text, "/start") === 0)
