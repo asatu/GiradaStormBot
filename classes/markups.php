@@ -48,4 +48,17 @@ class Markups
 
         return json_encode($list_markup);
     }
+
+    public static function getOrdinaMenu()
+    {
+        $order_markup = [
+            'reply_keyboard' => [
+                [
+                    ["remove_keyboard" => true]
+                ]
+            ]
+        ];
+
+        return json_encode($order_markup);
+    }
 }
