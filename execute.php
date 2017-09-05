@@ -36,14 +36,14 @@ if(strcmp($text, "/start") === 0)
 		."è quello di offrire gratuitamente un aiuto agli utenti per trovare nel minor tempo possibile i 3 amici necessari per ottenere il massimo sconto. "
 		."Non siamo quindi responsabili nè dell'ordine nè del prodotto acquistato, per i quali potrai contattare direttamente Girada.";
 
-	$parameters = ['chat_id' => $chatId, "text" => $response, "parse_mode" => "Markdown", "reply_markup" => Markups::getHomeMenu()];
+	$parameters = ['chat_id' => $chatId, "text" => $response, "parse_mode" => "Markdown", "reply_markup" => Markups::showHomeMenu()];
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);
 }
 elseif(strcmp($text, "/lista") === 0)
 {
     $response = "Visualizza la lista aggiornata";
-	$parameters = array('chat_id' => $chatId, "text" => $response, "reply_markup" => Markups::getListMenu());
+	$parameters = array('chat_id' => $chatId, "text" => $response, "reply_markup" => Markups::showListMenu());
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);	
 }
@@ -61,7 +61,7 @@ elseif(strcmp($text, "/ordina") === 0)
         ."\n"
         ."Adesso inserisci il *nome*, senza cognome:";
 
-	$parameters = ['chat_id' => $chatId, "text" => $response, "parse_mode" => "Markdown", "reply_markup" => Markups::getCancelMenu()];
+	$parameters = ['chat_id' => $chatId, "text" => $response, "parse_mode" => "Markdown", "reply_markup" => Markups::showCancelMenu()];
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);
 /**
@@ -73,7 +73,7 @@ elseif(strcmp($text, "/ordina") === 0)
 elseif(strcmp($text, "/home") === 0)
 {
     $response = "Seleziona un azione";
-    $parameters = array('chat_id' => $chatId, "text" => $response, "reply_markup" => Markups::getHomeMenu());
+    $parameters = array('chat_id' => $chatId, "text" => $response, "reply_markup" => Markups::showHomeMenu());
     $parameters["method"] = "sendMessage";
     echo json_encode($parameters);
 }

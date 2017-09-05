@@ -10,7 +10,7 @@ require_once('emoticons.php');
 
 class Markups
 {
-    public static function getHomeMenu()
+    public static function showHomeMenu()
     {
         $home_markup = [
             'inline_keyboard' => [
@@ -33,7 +33,7 @@ class Markups
         return json_encode($home_markup);
     }
 
-    public static function getListMenu()
+    public static function showListMenu()
     {
         $list_markup = [
             'inline_keyboard' => [
