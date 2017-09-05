@@ -51,7 +51,13 @@ class Markups
 
     public static function getCancelMenu()
     {
-        $order_markup = [ "keyboard" => [["Ti amo alla follia"], ["Mi spiace ma non fai per me"]]];
+        $order_markup = [
+            'keyboard' => [
+                [
+                    ["Ti amo alla follia"]
+                ]
+            ]
+        ];
 
         return json_encode($order_markup);
     }
