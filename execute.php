@@ -55,6 +55,7 @@ elseif(strcmp($text, "/listaprezzo") === 0)
 }
 elseif(strcmp($text, "/ordina") === 0)
 {
+    /**
     $response =
         "Verrai guidato passo passo per metterti in lista.\n"
         ."Ricorda che devi fare questi passaggi *prima* di effettuare l'ordine su Girada.";
@@ -67,7 +68,7 @@ elseif(strcmp($text, "/ordina") === 0)
     $parameters = ['chat_id' => $chatId, "text" => $first_step, "parse_mode" => "Markdown"];
     $parameters["method"] = "sendMessage";
     echo json_encode($parameters);
-
+*/
     $parameters = ['chat_id' => $chatId, "action" => "typing"];
     $parameters["method"] = "sendChatAction";
 }
