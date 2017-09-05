@@ -1,5 +1,6 @@
 {
   "require": {
-    "php": "^7.0.22"
+    "php": "^7.0.22",
+    "irazasyed/telegram-bot-sdk": "^2.0"
   }
 }

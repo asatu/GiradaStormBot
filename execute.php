@@ -1,7 +1,19 @@
 <?php
 
+require_once('classes/telegramConfig.php');
 require_once('classes/markups.php');
+require_once('vendor/autoload.php');
 
+use Telegram\Bot\Api;
+
+$telegram = new Api(TelegramConfig::BOT_TOKEN);
+
+$response = $telegram->getMe();
+
+$botId = $response->getId();
+$firstName = $response->getFirstName();
+$username = $response->getUsername();
+/**
 $content = file_get_contents("php://input");
 $request = json_decode($content, false);
 if(!$request)
@@ -64,11 +76,6 @@ elseif(strcmp($text, "/ordina") === 0)
 	$parameters = ['chat_id' => $chatId, "text" => $response, "parse_mode" => "Markdown", "reply_markup" => Markups::showCancelMenu()];
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);
-/**
-    $parameters2 = array('chat_id' => $chatId, "text" => "good! Now insert the surname");
-    $parameters2["method"] = "sendMessage";
-    echo json_encode($parameters2);
- * */
 }
 elseif(strcmp($text, "/home") === 0)
 {
@@ -84,5 +91,5 @@ elseif(strcmp($text, "Annulla") === 0)
     $parameters["method"] = "sendMessage";
     echo json_encode($parameters);
 }
-
+*/
 
