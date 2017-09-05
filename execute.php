@@ -39,13 +39,13 @@ else*/
 
     $first_name = $chat->getFirstName();
 	$chatId = $chat->getId();
-	$text = $message->getText();
+	$input = $message->getText();
    // $message->entities[0]->offset = $updateId + 1;
 }
 
-if(strcmp($text, "/start") === 0)
+if(strcmp($input, "/start") === 0)
 {
-	$response = 
+	$text =
 		"Ciao *$first_name*, benvenuto!\n"
 		."\n"
 		."Ti ricordiamo che tutto quello che riguarda *Girada Storm* non ha nulla a che vedere con *Girada*. Lo scopo di questo gruppo e di questo bot "
@@ -53,14 +53,16 @@ if(strcmp($text, "/start") === 0)
 		."Non siamo quindi responsabili nè dell'ordine nè del prodotto acquistato, per i quali potrai contattare direttamente Girada.";
 
 	/**
-	$parameters = ['chat_id' => $chatId, "text" => $response, "parse_mode" => "Markdown", "reply_markup" => Markups::showHomeMenu()];
+	$parameters = [  "reply_markup" => Markups::showHomeMenu()];
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);
      * */
 
-    $response2 = $telegram->sendMessage([
+    $response = $telegram->sendMessage([
         'chat_id' => $chatId,
-        'text' => 'Hello World'
+        'text' => $text,
+        'parse_mode' => 'Markdown',
+        'reply_markup' => Markups::showHomeMenu()
     ]);
 }
 /**
