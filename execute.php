@@ -27,14 +27,13 @@ if ($request->isType('callback_query'))
 else
 {
     $message = $request->getMessage();
-    $chat = $message->getChat();
+    //$chat = $message->getChat();
 
-    $first_name = $chat->getFirstName();
-	$chatId = $chat->getId();
+    $first_name = 's'; //$chat->getFirstName();
+	$chatId = '429393100'; //$chat->getId();
 	$input = $message->getText();
    // $message->entities[0]->offset = $updateId + 1;
 }
-
 
 $response = $telegram->sendMessage([
     'chat_id' => $chatId,
