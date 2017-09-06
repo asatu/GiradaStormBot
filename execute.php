@@ -31,7 +31,7 @@ else
 
     $first_name = 's'; //$chat->getFirstName();
 	$chatId = '429393100'; //$chat->getId();
-	$input = $message->getText();
+	$input = '';//$message->getText();
    // $message->entities[0]->offset = $updateId + 1;
 }
 
