@@ -37,7 +37,7 @@ else
 
 $response = $telegram->sendMessage([
     'chat_id' => $chatId,
-    'text' => json_encode( $request)
+    'text' => json_encode($request->getType())
 ]);
 
 
