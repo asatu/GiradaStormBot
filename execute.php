@@ -15,13 +15,13 @@ $updateId = $request->getUpdateId();
 if ($telegram->isMessageType('callback_query', $request))
 {
     $test ="call";
-    $callbackQuery = $request->getCallbackQuery();
-    $message = $callbackQuery->getMessage();
-    $chat = $message->getChat();
+    //$callbackQuery = $request->getCallbackQuery();
+    //$message = $callbackQuery->getMessage();
+    //$chat = $message->getChat();
 
-	$first_name = $chat->first_name;
-	$chatId = $chat->id; 
-	$input = $callbackQuery->data;
+	//$first_name = $chat->first_name;
+	$chatId = '429393100';
+	//$input = $callbackQuery->data;
     //$message->entities[0]->offset = $updateId + 1;
 }
 else
