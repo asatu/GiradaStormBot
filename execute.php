@@ -14,6 +14,7 @@ $updateId = $request->getUpdateId();
 
 if ($request->getCallbackQuery())
 {
+    $test ="call";
     $callbackQuery = $request->getCallbackQuery();
     $message = $callbackQuery->getMessage();
     $chat = $message->getChat();
@@ -25,6 +26,7 @@ if ($request->getCallbackQuery())
 }
 else
 {
+    $test ="mess";
     $message = $request->getMessage();
     //$chat = $message->getChat();
 
@@ -36,7 +38,7 @@ else
 
 $response = $telegram->sendMessage([
     'chat_id' => $chatId,
-    'text' => json_encode($request->getType())
+    'text' => json_encode($test)
 ]);
 
 
