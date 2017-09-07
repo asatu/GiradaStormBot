@@ -8,46 +8,28 @@ use Telegram\Bot\Api;
 
 $telegram = new Api(TelegramConfig::BOT_TOKEN);
 
-$request = $telegram->getWebhookUpdates();
+$request = $telegram->getWebhookUpdate();
 
 $updateId = $request->getUpdateId();
+$chat = $request->getChat();
 
-$response = $telegram->sendMessage([
-    'chat_id' => '429393100',
-    'text' => json_encode($request)
-]);
+$chatId = $chat->getId();
+$first_name = $chat->getFirstName();
 
-if ($telegram->isMessageType('text', $request))
+if ($request->detectType() == 'message')
 {
     $message = $request->getMessage();
-    $chat = $message->getChat();
 
-    $first_name = $chat->getFirstName();
-    $chatId = $chat->getId();
     $input = $message->getText();
     // $message->entities[0]->offset = $updateId + 1;
-
-    $response = $telegram->sendMessage([
-        'chat_id' => $chatId ,
-        'text' => "message"
-    ]);
 }
 else
 {
-    $test ="call";
-    //$callbackQuery = $request->getCallbackQuery();
-    //$message = $callbackQuery->getMessage();
-    //$chat = $message->getChat();
+    $callbackQuery = $request->getCallbackQuery();
+    $message = $callbackQuery->getMessage();
 
-    //$first_name = $chat->first_name;
-    $chatId = '429393100';
-    //$input = $callbackQuery->data;
+    $input = $callbackQuery->getData();
     //$message->entities[0]->offset = $updateId + 1;
-
-    $response = $telegram->sendMessage([
-        'chat_id' => $chatId ,
-        'text' => $test
-    ]);
 }
 
 if(strcmp($input, "/start") === 0)
@@ -81,7 +63,7 @@ elseif(strcmp($text, "/listaprezzo") === 0)
 {
 	$parameters = array('chat_id' => $chatId, "text" => "qui scarichiamo la lista per prezzo aaaaaaaaaaaa");
 	$parameters["method"] = "sendMessage";
-	echo json_encode($parameters);	
+	echo json_encode($parameters);
 }
 elseif(strcmp($text, "/ordina") === 0)
 {
