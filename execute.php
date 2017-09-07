@@ -12,8 +12,7 @@ $request = $telegram->getWebhookUpdates();
 
 $updateId = $request->getUpdateId();
 
-
-if ($request->isType('callback_query'))
+if ($request->getCallbackQuery())
 {
     $callbackQuery = $request->getCallbackQuery();
     $message = $callbackQuery->getMessage();
