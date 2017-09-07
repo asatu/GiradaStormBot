@@ -5,7 +5,6 @@ require_once('classes/markups.php');
 require_once('vendor/autoload.php');
 
 use Telegram\Bot\Api;
-use Telegram\Bot\Keyboard;
 
 $telegram = new Api(TelegramConfig::BOT_TOKEN);
 
