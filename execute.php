@@ -12,12 +12,12 @@ $request = $telegram->getWebhookUpdates();
 
 $updateId = $request->getUpdateId();
 
-
+/**
 $response = $telegram->sendMessage([
     'chat_id' => '429393100',
     'text' => json_encode($telegram->detectMessageType($request))
 ]);
-
+*/
 
 if ($telegram->isMessageType('text', $request))
 {
@@ -28,6 +28,11 @@ if ($telegram->isMessageType('text', $request))
     $chatId = $chat->getId();
     $input = $message->getText();
     // $message->entities[0]->offset = $updateId + 1;
+
+    $response = $telegram->sendMessage([
+        'chat_id' => $chatId ,
+        'text' => json_encode($telegram->$request)
+    ]);
 }
 else
 {
@@ -51,6 +56,7 @@ if(strcmp($input, "/start") === 0)
 		."è quello di offrire gratuitamente un aiuto agli utenti per trovare nel minor tempo possibile i 3 amici necessari per ottenere il massimo sconto. "
 		."Non siamo quindi responsabili nè dell'ordine nè del prodotto acquistato, per i quali potrai contattare direttamente Girada.";
 
+	$keyboard = new
     $response = $telegram->sendMessage([
         'chat_id' => $chatId,
         'text' => $text,

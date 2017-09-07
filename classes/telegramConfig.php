@@ -9,5 +9,5 @@
 class TelegramConfig
 {
     const WEBHOOK_URL = 'https://giradastormbot.herokuapp.com/execute.php';
-    const BOT_TOKEN = '430468745:AAFf2enKI48Xr2vHqnFcWz3eyUK0pA_Mk44';
+    const BOT_TOKEN = '361431393:AAG-1mBbxkDlA7kgJZtSIVoyceqpxhE83O8';
 }
