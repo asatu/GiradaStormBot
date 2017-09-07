@@ -12,12 +12,12 @@ $request = $telegram->getWebhookUpdates();
 
 $updateId = $request->getUpdateId();
 
-/**
+
 $response = $telegram->sendMessage([
     'chat_id' => '429393100',
-    'text' => json_encode($telegram->detectMessageType($request))
+    'text' => json_encode($request)
 ]);
-*/
+
 
 if ($telegram->isMessageType('text', $request))
 {
