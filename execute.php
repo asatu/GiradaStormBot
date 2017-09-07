@@ -12,6 +12,13 @@ $request = $telegram->getWebhookUpdates();
 
 $updateId = $request->getUpdateId();
 
+
+$response = $telegram->sendMessage([
+    'chat_id' => $chatId,
+    'text' => json_encode($telegram->detectMessageType($request))
+]);
+
+
 if ($telegram->isMessageType('callback_query', $request))
 {
     $test ="call";
