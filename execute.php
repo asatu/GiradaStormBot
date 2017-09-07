@@ -15,6 +15,10 @@ $updateId = $request->getUpdateId();
 
 $response = $telegram->sendMessage([
     'chat_id' => '429393100',
+    'text' => json_encode($request)
+]);
+$response = $telegram->sendMessage([
+    'chat_id' => '429393100',
     'text' => json_encode($telegram->detectMessageType($request))
 ]);
 
