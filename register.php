@@ -1,5 +1,7 @@
 <?php
 
+require_once('classes/telegramConfig.php');
+
 use Telegram\Bot\Api;
 
 // PARAMETRI DA MODIFICARE
