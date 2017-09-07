@@ -1,6 +1,7 @@
 <?php
 
 require_once('classes/telegramConfig.php');
+require_once('vendor/autoload.php');
 
 use Telegram\Bot\Api;
 
