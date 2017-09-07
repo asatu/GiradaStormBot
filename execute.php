@@ -19,36 +19,28 @@ $response = $telegram->sendMessage([
 ]);
 
 
-if ($telegram->isMessageType('callback_query', $request))
+if ($telegram->isMessageType('text', $request))
+{
+    $message = $request->getMessage();
+    $chat = $message->getChat();
+
+    $first_name = $chat->getFirstName();
+    $chatId = $chat->getId();
+    $input = $message->getText();
+    // $message->entities[0]->offset = $updateId + 1;
+}
+else
 {
     $test ="call";
     //$callbackQuery = $request->getCallbackQuery();
     //$message = $callbackQuery->getMessage();
     //$chat = $message->getChat();
 
-	//$first_name = $chat->first_name;
-	$chatId = '429393100';
-	//$input = $callbackQuery->data;
+    //$first_name = $chat->first_name;
+    $chatId = '429393100';
+    //$input = $callbackQuery->data;
     //$message->entities[0]->offset = $updateId + 1;
 }
-else
-{
-    $test ="mess";
-    $message = $request->getMessage();
-    //$chat = $message->getChat();
-
-    $first_name = 's'; //$chat->getFirstName();
-	$chatId = '429393100'; //$chat->getId();
-	$input = 'aa';//$message->getText();
-   // $message->entities[0]->offset = $updateId + 1;
-}
-
-$response = $telegram->sendMessage([
-    'chat_id' => $chatId,
-    'text' => json_encode($test)
-]);
-
-
 
 if(strcmp($input, "/start") === 0)
 {
