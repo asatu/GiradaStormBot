@@ -31,7 +31,7 @@ if ($telegram->isMessageType('text', $request))
 
     $response = $telegram->sendMessage([
         'chat_id' => $chatId ,
-        'text' => json_encode($telegram->$request)
+        'text' => json_encode($request)
     ]);
 }
 else
@@ -55,7 +55,7 @@ if(strcmp($input, "/start") === 0)
 		."Ti ricordiamo che tutto quello che riguarda *Girada Storm* non ha nulla a che vedere con *Girada*. Lo scopo di questo gruppo e di questo bot "
 		."è quello di offrire gratuitamente un aiuto agli utenti per trovare nel minor tempo possibile i 3 amici necessari per ottenere il massimo sconto. "
 		."Non siamo quindi responsabili nè dell'ordine nè del prodotto acquistato, per i quali potrai contattare direttamente Girada.";
-    
+
     $response = $telegram->sendMessage([
         'chat_id' => $chatId,
         'text' => $text,
