@@ -12,7 +12,7 @@ $request = $telegram->getWebhookUpdates();
 
 $updateId = $request->getUpdateId();
 
-if ($request->getCallbackQuery())
+if ($telegram->isMessageType('callback_query', $request))
 {
     $test ="call";
     $callbackQuery = $request->getCallbackQuery();
@@ -40,6 +40,7 @@ $response = $telegram->sendMessage([
     'chat_id' => $chatId,
     'text' => json_encode($test)
 ]);
+
 
 
 if(strcmp($input, "/start") === 0)
