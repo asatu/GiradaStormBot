@@ -12,17 +12,6 @@ $request = $telegram->getWebhookUpdates();
 
 $updateId = $request->getUpdateId();
 
-
-$response = $telegram->sendMessage([
-    'chat_id' => '429393100',
-    'text' => json_encode($request)
-]);
-$response = $telegram->sendMessage([
-    'chat_id' => '429393100',
-    'text' => json_encode($telegram->detectMessageType($request))
-]);
-
-
 if ($telegram->isMessageType('text', $request))
 {
     $message = $request->getMessage();
@@ -35,7 +24,7 @@ if ($telegram->isMessageType('text', $request))
 
     $response = $telegram->sendMessage([
         'chat_id' => $chatId ,
-        'text' => json_encode($request)
+        'text' => "message"
     ]);
 }
 else
@@ -49,6 +38,11 @@ else
     $chatId = '429393100';
     //$input = $callbackQuery->data;
     //$message->entities[0]->offset = $updateId + 1;
+
+    $response = $telegram->sendMessage([
+        'chat_id' => $chatId ,
+        'text' => $test
+    ]);
 }
 
 if(strcmp($input, "/start") === 0)
