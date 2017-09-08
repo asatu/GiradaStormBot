@@ -89,7 +89,7 @@ elseif(strcmp($input, "/ordina") === 0)
     $response = $telegram->sendMessage([
         'chat_id' => $chatId,
         'text' => $text,
-        'reply_markup' => Markups::reply()
+        'reply_markup' => Markups::showCancelMenu()
     ]);
 
     $telegram->sendMessage([
