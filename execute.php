@@ -76,7 +76,7 @@ elseif(strcmp($text, "/listaprezzo") === 0)
 	echo json_encode($parameters);
 }
  * */
-elseif(strcmp($text, "/ordina") === 0)
+elseif(strcmp($text, "\/ordina") === 0)
 {
     $text =
         "Verrai guidato passo passo per metterti in lista.\n"
