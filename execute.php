@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 
 require_once('classes/telegramConfig.php');
 require_once('classes/markups.php');
@@ -59,6 +58,9 @@ $telegram->sendMessage([
 
 if(strcmp($input, "/start") === 0)
 {
+
+    session_start();
+    
 	$text =
 		"Ciao *$first_name*, benvenuto!\n"
 		."\n"
