@@ -26,10 +26,15 @@ if ($request->detectType() == 'message')
 else
 {
     $callbackQuery = $request->getCallbackQuery();
-    $message = $callbackQuery->getMessage();
+   // $message = $callbackQuery->getMessage();
 
     $input = $callbackQuery->getData();
     //$message->entities[0]->offset = $updateId + 1;
+
+    $telegram->sendMessage([
+        'chat_id' => $chatId,
+        'text' => 'input' . json_encode($input)
+    ]);
 }
 
 $telegram->sendMessage([
