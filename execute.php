@@ -15,6 +15,8 @@ $chat = $request->getChat();
 
 $chatId = $chat->getId();
 $first_name = $chat->getFirstName();
+$last_name = $chat->getLastName();
+$username = $chat->getUsername();
 
 if ($request->detectType() == 'message')
 {
@@ -30,8 +32,12 @@ else
 
     $input = $callbackQuery->getData();
     //$message->entities[0]->offset = $updateId + 1;
+}
 
-
+if(array_key_exists($username, $user_order_array))
+{
+    $param = $input;
+    $input = "/ordina";
 }
 
 $telegram->sendMessage([
@@ -80,30 +86,75 @@ elseif(strcmp($text, "/listaprezzo") === 0)
  * */
 elseif(strcmp($input, "/ordina") === 0)
 {
-    $text =
-        "Verrai guidato passo passo per metterti in lista.\n"
-        ."Ricorda che devi fare questi passaggi *prima* di effettuare l'ordine su Girada.\n"
-        ."\n"
-        ."Adesso inserisci il *nome*, senza cognome:";
+    if($username == '')
+    {
+        $telegram->sendMessage([
+            'chat_id' => $chatId,
+            'text' => 'Devi impostare lo username prima di ordinare'
+        ]);
+    }
+    else
+    {
+        if(array_key_exists($username, $user_order_array))
+        {
+            $order = $user_order_array[$username];
+            if($order->step == 1)
+            {
+                $order->personalcode = $param;
+                $order->step = 2;
 
-    $response1 = $telegram->sendMessage([
-        'chat_id' => $chatId,
-        'text' => $text,
-        'reply_markup' => Markups::showCancelMenu()
-    ]);
+                $telegram->sendMessage([
+                    'chat_id' => $chatId,
+                    'text' => 'Inserisci il *prodotto* che vuoi acquistare',
+                    'reply_markup' => Markups::showCancelMenu()
+                ]);
+            }
+            elseif($order->step == 2)
+            {
+                $order->product = $param;
+                $order->step = 3;
 
-    $text = "Inserisci il cognome:";
+                $telegram->sendMessage([
+                    'chat_id' => $chatId,
+                    'text' => 'Inserisci il *prezzo*: ',
+                    'reply_markup' => Markups::showCancelMenu()
+                ]);
+            }
+            elseif($order->step == 3)
+            {
+                $order->price = $param;
+                $order->step = 4;
 
-    $response2 = $telegram->sendMessage([
-        'chat_id' => $chatId,
-        'text' => $text,
-        'reply_markup' => Markups::showCancelMenu()
-    ]);
+                $telegram->sendMessage([
+                    'chat_id' => $chatId,
+                    'text' => 'bravo ',
+                    'reply_markup' => Markups::showCancelMenu()
+                ]);
+            }
 
-    $telegram->sendMessage([
-        'chat_id' => $chatId,
-        'text' => "response1: " . $response1 . " ---- response2: " . $response2
-    ]);
+            $telegram->sendMessage([
+                'chat_id' => $chatId,
+                'text' => $json_encode($order)
+            ]);
+        }
+        else
+        {
+            $user_order_array = array($username => new Order());
+            $text =
+                "Verrai guidato passo passo per metterti in lista.\n"
+                ."Ricorda che devi fare questi passaggi *prima* di effettuare l'ordine su Girada.\n"
+                ."\n"
+                ."Adesso inserisci il *tuo codice Girada*: ";
+
+            $response1 = $telegram->sendMessage([
+                'chat_id' => $chatId,
+                'text' => $text,
+                'reply_markup' => Markups::showCancelMenu()
+            ]);
+        }
+        
+    }
+
 
 }
 elseif(strcmp($input, "/home") === 0)
