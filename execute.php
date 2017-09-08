@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$_SESSION['order_pending'] = false;
 
 require_once('classes/telegramConfig.php');
 require_once('classes/markups.php');
@@ -37,7 +38,7 @@ else
     //$message->entities[0]->offset = $updateId + 1;
 }
 
-if(array_key_exists($username, $user_order_array))
+if($_SESSION['order_pending'] == true)
 {
     $param = $input;
     $input = "/ordina";
@@ -103,60 +104,50 @@ elseif(strcmp($input, "/ordina") === 0)
     }
     else
     {
-        if(array_key_exists($username, $user_order_array))
+        $_SESSION['order_pending'] = true;
+        if(!isset($_SESSION['order_step']) || empty($_SESSION['order_step']))
         {
-            $order = $user_order_array[$username];
-            if($order->step == 1)
-            {
-                $order->personalcode = $param;
-                $order->step = 2;
-
-                $telegram->sendMessage([
-                    'chat_id' => $chatId,
-                    'text' => 'Inserisci il *prodotto* che vuoi acquistare',
-                    'reply_markup' => Markups::showCancelMenu()
-                ]);
-            }
-            elseif($order->step == 2)
-            {
-                $order->product = $param;
-                $order->step = 3;
-
-                $telegram->sendMessage([
-                    'chat_id' => $chatId,
-                    'text' => 'Inserisci il *prezzo*: ',
-                    'reply_markup' => Markups::showCancelMenu()
-                ]);
-            }
-            elseif($order->step == 3)
-            {
-                $order->price = $param;
-                $order->step = 4;
-
-                $telegram->sendMessage([
-                    'chat_id' => $chatId,
-                    'text' => 'bravo ',
-                    'reply_markup' => Markups::showCancelMenu()
-                ]);
-            }
-
-            $telegram->sendMessage([
-                'chat_id' => $chatId,
-                'text' => $json_encode($order)
-            ]);
-        }
-        else
-        {
-            $user_order_array = array($username => new Order());
             $text =
                 "Verrai guidato passo passo per metterti in lista.\n"
-                ."Ricorda che devi fare questi passaggi *prima* di effettuare l'ordine su Girada.\n"
-                ."\n"
-                ."Adesso inserisci il *tuo codice Girada*: ";
+                . "Ricorda che devi fare questi passaggi *prima* di effettuare l'ordine su Girada.\n"
+                . "\n"
+                . "Adesso inserisci il *tuo codice Girada*: ";
 
             $response1 = $telegram->sendMessage([
                 'chat_id' => $chatId,
                 'text' => $text,
+                'reply_markup' => Markups::showCancelMenu()
+            ]);
+
+            $_SESSION['order_step'] = 1;
+        }
+        elseif($_SESSION['order_step'] == 1)
+        {
+            $_SESSION['order_step'] = 2
+
+            $telegram->sendMessage([
+                'chat_id' => $chatId,
+                'text' => 'Inserisci il *prodotto* che vuoi acquistare',
+                'reply_markup' => Markups::showCancelMenu()
+            ]);
+        }
+        elseif($_SESSION['order_step'] == 2)
+        {
+            $_SESSION['order_step'] = 3;
+
+            $telegram->sendMessage([
+                'chat_id' => $chatId,
+                'text' => 'Inserisci il *prezzo*: ',
+                'reply_markup' => Markups::showCancelMenu()
+            ]);
+        }
+        elseif($_SESSION['order_step'] == 3)
+        {
+            $_SESSION['order_step'] = 4;
+
+            $telegram->sendMessage([
+                'chat_id' => $chatId,
+                'text' => 'bravo ',
                 'reply_markup' => Markups::showCancelMenu()
             ]);
         }
