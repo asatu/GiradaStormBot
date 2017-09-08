@@ -31,11 +31,13 @@ else
     $input = $callbackQuery->getData();
     //$message->entities[0]->offset = $updateId + 1;
 
-    $telegram->sendMessage([
-        'chat_id' => $chatId,
-        'text' => 'input' . json_encode($input)
-    ]);
+
 }
+
+$telegram->sendMessage([
+    'chat_id' => $chatId,
+    'text' => 'input' . json_encode($input)
+]);
 
 $telegram->sendMessage([
     'chat_id' => $chatId,
@@ -76,7 +78,7 @@ elseif(strcmp($text, "/listaprezzo") === 0)
 	echo json_encode($parameters);
 }
  * */
-elseif(strcmp($text, "\/ordina") === 0)
+elseif(strcmp($input, "/ordina") === 0)
 {
     $text =
         "Verrai guidato passo passo per metterti in lista.\n"
