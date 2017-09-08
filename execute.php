@@ -172,4 +172,11 @@ elseif(strcmp($input, "Annulla") === 0)
     ]);
 }
 
+if(isset($_SESSION['order_pending']) && !empty($_SESSION['order_pending']))
+{
+    $response = $telegram->sendMessage([
+        'chat_id' => $chatId,
+        'text' =>'wow'
+    ]);
+}
 
