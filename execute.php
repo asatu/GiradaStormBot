@@ -16,8 +16,6 @@ $chat = $request->getChat();
 $chatId = $chat->getId();
 $first_name = $chat->getFirstName();
 
-
-
 if ($request->detectType() == 'message')
 {
     $message = $request->getMessage();
@@ -33,6 +31,11 @@ else
     $input = $callbackQuery->getData();
     //$message->entities[0]->offset = $updateId + 1;
 }
+
+$telegram->sendMessage([
+    'chat_id' => $chatId,
+    'text' => json_encode($request)
+]);
 
 if(strcmp($input, "/start") === 0)
 {
