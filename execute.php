@@ -2,6 +2,7 @@
 
 require_once('classes/telegramConfig.php');
 require_once('classes/markups.php');
+require_once('classes/order.php');
 require_once('vendor/autoload.php');
 
 use Telegram\Bot\Api;
@@ -152,10 +153,7 @@ elseif(strcmp($input, "/ordina") === 0)
                 'reply_markup' => Markups::showCancelMenu()
             ]);
         }
-        
     }
-
-
 }
 elseif(strcmp($input, "/home") === 0)
 {
