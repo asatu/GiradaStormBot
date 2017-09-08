@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once('classes/telegramConfig.php');
 require_once('classes/markups.php');
 require_once('classes/order.php');
