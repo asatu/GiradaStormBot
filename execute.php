@@ -39,6 +39,11 @@ if(array_key_exists($username, $user_order_array))
 {
     $param = $input;
     $input = "/ordina";
+
+    $telegram->sendMessage([
+        'chat_id' => $chatId,
+        'text' => 'esiste'
+    ]);
 }
 
 $telegram->sendMessage([
