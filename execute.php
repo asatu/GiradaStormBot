@@ -123,7 +123,7 @@ elseif(strcmp($input, "/ordina") === 0)
         }
         elseif($_SESSION['order_step'] == 1)
         {
-            $_SESSION['order_step'] = 2
+            $_SESSION['order_step'] = 2;
 
             $telegram->sendMessage([
                 'chat_id' => $chatId,
