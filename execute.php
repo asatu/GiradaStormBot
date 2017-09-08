@@ -82,9 +82,19 @@ elseif(strcmp($input, "/ordina") === 0)
 {
     $text =
         "Verrai guidato passo passo per metterti in lista.\n"
-        ."Ricorda che devi fare questi passaggi *prima* di effettuare l'ordine su Girada.\n";
+        ."Ricorda che devi fare questi passaggi *prima* di effettuare l'ordine su Girada.\n"
+        ."\n"
+        ."Adesso inserisci il *nome*, senza cognome:";
 
-    $response = $telegram->sendMessage([
+    $response1 = $telegram->sendMessage([
+        'chat_id' => $chatId,
+        'text' => $text,
+        'reply_markup' => Markups::showCancelMenu()
+    ]);
+
+    $text = "Inserisci il cognome:";
+
+    $response2 = $telegram->sendMessage([
         'chat_id' => $chatId,
         'text' => $text,
         'reply_markup' => Markups::showCancelMenu()
@@ -92,9 +102,9 @@ elseif(strcmp($input, "/ordina") === 0)
 
     $telegram->sendMessage([
         'chat_id' => $chatId,
-        'text' => "Adesso inserisci il *nome*, senza cognome:",
-        'reply_markup' => MArkups::reply()
+        'text' => "response1: " . $response1 . " ---- response2: " . $response2
     ]);
+
 }
 elseif(strcmp($input, "/home") === 0)
 {
