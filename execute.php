@@ -1,11 +1,9 @@
 <?php
 
 session_start();
-$_SESSION['order_pending'] = false;
 
 require_once('classes/telegramConfig.php');
 require_once('classes/markups.php');
-require_once('classes/order.php');
 require_once('vendor/autoload.php');
 
 use Telegram\Bot\Api;
@@ -38,14 +36,14 @@ else
     //$message->entities[0]->offset = $updateId + 1;
 }
 
-if($_SESSION['order_pending'] == true)
+if(isset($_SESSION['order_pending']) && !empty($_SESSION['order_pending']))
 {
     $param = $input;
     $input = "/ordina";
 
     $telegram->sendMessage([
         'chat_id' => $chatId,
-        'text' => 'esiste'
+        'text' => $input . $param . 'esiste'
     ]);
 }
 
