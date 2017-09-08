@@ -16,6 +16,10 @@ $chat = $request->getChat();
 $chatId = $chat->getId();
 $first_name = $chat->getFirstName();
 
+$telegram->sendMessage([
+    'chat_id' => $chatId,
+    'text' => $request]);
+
 if ($request->detectType() == 'message')
 {
     $message = $request->getMessage();
@@ -65,19 +69,26 @@ elseif(strcmp($text, "/listaprezzo") === 0)
 	$parameters["method"] = "sendMessage";
 	echo json_encode($parameters);
 }
+ * */
 elseif(strcmp($text, "/ordina") === 0)
 {
-    $response =
+    $text =
         "Verrai guidato passo passo per metterti in lista.\n"
         ."Ricorda che devi fare questi passaggi *prima* di effettuare l'ordine su Girada.\n"
         ."\n"
         ."Adesso inserisci il *nome*, senza cognome:";
 
-	$parameters = ['chat_id' => $chatId, "text" => $response, "parse_mode" => "Markdown", "reply_markup" => Markups::showCancelMenu()];
-	$parameters["method"] = "sendMessage";
-	echo json_encode($parameters);
+    $response = $telegram->sendMessage([
+        'chat_id' => $chatId,
+        'text' => $text,
+        'reply_markup' => Markups::reply()
+    ]);
+
+    $telegram->sendMessage([
+        'chat_id' => $chatId,
+        'text' => 'request: ' . $request . ' ---- response:' . $response
+    ]);
 }
- * */
 elseif(strcmp($input, "/home") === 0)
 {
     $text = "Seleziona un azione";

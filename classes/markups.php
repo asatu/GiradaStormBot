@@ -69,4 +69,13 @@ class Markups
 
         return json_encode($remove_markup);
     }
+
+    public static function reply()
+    {
+        $reply_markup = [
+            'force_reply' => true
+        ];
+
+        return json_encode($reply_markup);
+    }
 }
