@@ -16,9 +16,7 @@ $chat = $request->getChat();
 $chatId = $chat->getId();
 $first_name = $chat->getFirstName();
 
-$telegram->sendMessage([
-    'chat_id' => $chatId,
-    'text' => $request]);
+
 
 if ($request->detectType() == 'message')
 {
