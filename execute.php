@@ -104,7 +104,7 @@ elseif(strcmp($input, "/ordina") === 0)
     }
     else
     {
-        if(!isset($decoded) || empty($decoded))
+        if(!isset($sessionState) || empty($sessionState))
         {
             $text =
                 "Verrai guidato passo passo per metterti in lista.\n"
@@ -118,17 +118,15 @@ elseif(strcmp($input, "/ordina") === 0)
                 'reply_markup' => Markups::showCancelMenu()
             ]);
         }
-        elseif($decoded == 'Step1')
+        elseif($sessionState == 'Step1')
         {
-            $_SESSION['order_step'] = 2;
-
             $telegram->sendMessage([
                 'chat_id' => $chatId,
                 'text' => 'Inserisci il *prodotto* che vuoi acquistare',
                 'reply_markup' => Markups::showCancelMenu()
             ]);
         }
-        elseif($decoded == 'Step2')
+        elseif($sessionState == 'Step2')
         {
             $telegram->sendMessage([
                 'chat_id' => $chatId,
@@ -136,7 +134,7 @@ elseif(strcmp($input, "/ordina") === 0)
                 'reply_markup' => Markups::showCancelMenu()
             ]);
         }
-        elseif($decoded == 'Step3')
+        elseif($sessionState == 'Step3')
         {
             $telegram->sendMessage([
                 'chat_id' => $chatId,
