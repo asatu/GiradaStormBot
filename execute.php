@@ -39,7 +39,7 @@ else
 $session = new SessionClient();
 $sessionState = $session->GetCurrentSession($username);
 
-if (isset($sessionState)) {
+if (isset($sessionState) && !empty($sessionState)) {
     $param = $sessionState;
     $input = "/ordina";
 }
