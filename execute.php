@@ -1,6 +1,7 @@
 <?php
 
 require_once('classes/markups.php');
+require_once('classes/telegramClient.php');
 require_once('vendor/autoload.php');
 
 $telegramClient = new TelegramClient();
