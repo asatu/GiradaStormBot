@@ -46,7 +46,7 @@ if (isset($sessionState)) {
 
 $telegram->sendMessage([
     'chat_id' => $chatId,
-    'text' => 'resp:' . $sessionState
+    'text' => 'resp:' . $sessionState . ' - username:' . $username
 ]);
 
 $telegram->sendMessage([
