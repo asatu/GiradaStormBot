@@ -33,6 +33,6 @@ class Emoticons
     }
 
     public static function getEmojiQuestion() {
-        return json_decode('"\u003F"');
+        return json_decode('"\ud83c\udd98"');
     }
 }
