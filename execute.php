@@ -1,86 +1,21 @@
 <?php
 
-require_once('classes/telegramConfig.php');
 require_once('classes/markups.php');
-require_once('classes/api_clients/sessionClient.php');
 require_once('vendor/autoload.php');
 
-use Telegram\Bot\Api;
+$telegramClient = new TelegramClient();
+$command = $telegramClient->GetInputCommand();
 
-$telegram = new Api(TelegramConfig::BOT_TOKEN);
-
-$request = $telegram->getWebhookUpdate();
-
-$updateId = $request->getUpdateId();
-$chat = $request->getChat();
-
-$chatId = $chat->getId();
-$first_name = $chat->getFirstName();
-$last_name = $chat->getLastName();
-$username = $chat->getUsername();
-
-if ($request->detectType() == 'message')
+if(strcmp($command, "/start") === 0)
 {
-    $message = $request->getMessage();
-
-    $input = $message->getText();
-    // $message->entities[0]->offset = $updateId + 1;
+    $telegramClient->ShowHomeView();
 }
-else
-{
-    $callbackQuery = $request->getCallbackQuery();
-   // $message = $callbackQuery->getMessage();
-
-    $input = $callbackQuery->getData();
-    //$message->entities[0]->offset = $updateId + 1;
-}
-
-
-$session = new SessionClient();
-$sessionState = $session->GetCurrentSession($username);
-
-if (isset($sessionState) && !empty($sessionState)) {
-    $param = $sessionState;
-    $input = "/ordina";
-}
-
-$telegram->sendMessage([
-    'chat_id' => $chatId,
-    'text' => 'resp:' . $sessionState . ' - username:' . $username
-]);
-
-$telegram->sendMessage([
-    'chat_id' => $chatId,
-    'text' => 'input' . json_encode($input)
-]);
-
-$telegram->sendMessage([
-    'chat_id' => $chatId,
-    'text' => json_encode($request)
-]);
-
-if(strcmp($input, "/start") === 0)
-{
-	$text =
-		"Ciao *$first_name*, benvenuto!\n"
-		."\n"
-		."Ti ricordiamo che tutto quello che riguarda *Girada Storm* non ha nulla a che vedere con *Girada*. Lo scopo di questo gruppo e di questo bot "
-		."è quello di offrire gratuitamente un aiuto agli utenti per trovare nel minor tempo possibile i 3 amici necessari per ottenere il massimo sconto. "
-		."Non siamo quindi responsabili nè dell'ordine nè del prodotto acquistato, per i quali potrai contattare direttamente Girada.";
-
-    $response = $telegram->sendMessage([
-        'chat_id' => $chatId,
-        'text' => $text,
-        'parse_mode' => 'Markdown',
-        'reply_markup' => Markups::showHomeMenu()
-    ]);
-}
-elseif(strcmp($input, "/lista") === 0)
+elseif(strcmp($command, "/lista") === 0)
 {
     $text = "Visualizza la lista aggiornata";
 
     $response = $telegram->sendMessage([
-        'chat_id' => $chatId,
+        'chat_id' => $request->Chat_id,
         'text' => $text,
         'reply_markup' => Markups::showListMenu()
     ]);
@@ -93,7 +28,7 @@ elseif(strcmp($text, "/listaprezzo") === 0)
 	echo json_encode($parameters);
 }
  * */
-elseif(strcmp($input, "/ordina") === 0)
+elseif(strcmp($command, "/ordina") === 0)
 {
     if(!isset($username) || empty($username))
     {
@@ -144,7 +79,7 @@ elseif(strcmp($input, "/ordina") === 0)
         }
     }
 }
-elseif(strcmp($input, "/home") === 0)
+elseif(strcmp($command, "/home") === 0)
 {
     $text = "Seleziona un azione";
 
@@ -154,7 +89,7 @@ elseif(strcmp($input, "/home") === 0)
         'reply_markup' => Markups::showHomeMenu()
     ]);
 }
-elseif(strcmp($input, "Annulla") === 0)
+elseif(strcmp($command, "Annulla") === 0)
 {
     $text = "Annullato";
 
