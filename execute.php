@@ -39,7 +39,7 @@ else
 $session = new SessionClient();
 $sessionState = $session->GetCurrentSession($username);
 
-if (!isset($sessionState->response->status) && $sessionState->response->status != 'ERROR') {
+if (isset($sessionState)) {
     $param = $input;
     $input = "/ordina";
 
