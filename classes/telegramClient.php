@@ -62,20 +62,47 @@ class TelegramClient
         return $this->request->Command;
     }
 
-    public function ShowHomeView()
+    public function ShowStartView()
     {
         $text =
-            "Ciao * " . $this->request->First_name . "*, benvenuto!\n"
+            "Ciao *" . $this->request->First_name . "*, benvenuto!\n"
             ."\n"
             ."Ti ricordiamo che tutto quello che riguarda *Girada Storm* non ha nulla a che vedere con *Girada*. Lo scopo di questo gruppo e di questo bot "
             ."è quello di offrire gratuitamente un aiuto agli utenti per trovare nel minor tempo possibile i 3 amici necessari per ottenere il massimo sconto. "
             ."Non siamo quindi responsabili nè dell'ordine nè del prodotto acquistato, per i quali potrai contattare direttamente Girada.";
 
+        if(!isset($this->request->Username) || empty($this->request->Username))
+        {
+            $text = $text . "\n" .
+                "\n" .
+                "*N.B.* :Per metterti in lista è necessario che tu imposti uno username.";
+        }
+
         $this->telegram->sendMessage([
             'chat_id' => $this->request->Chat_id,
             'text' => $text,
             'parse_mode' => 'Markdown',
-            'reply_markup' => Markups::showHomeMenu()
+            'reply_markup' => Markups::showMainMenu()
+        ]);
+    }
+
+    public function ShowListView()
+    {
+        /** In questo metodo si entra solo se viene fatta la richiesta di visualizzazione lista dal comando /lista */
+
+        $this->telegram->sendMessage([
+            'chat_id' => $this->request->Chat_id,
+            'text' => 'TODO : Qui va del testo da decidere',
+            'reply_markup' => Markups::showListMenu()
+        ]);
+    }
+
+    public function ShowMainMenuView()
+    {
+        $this->telegram->sendMessage([
+            'chat_id' => $this->request->Chat_id,
+            'text' => 'TODO : Qui va del testo da decidere',
+            'reply_markup' => Markups::showMainMenu()
         ]);
     }
 }

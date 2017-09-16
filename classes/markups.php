@@ -10,7 +10,7 @@ require_once('emoticons.php');
 
 class Markups
 {
-    public static function showHomeMenu()
+    public static function showMainMenu()
     {
         $home_markup = [
             'inline_keyboard' => [
@@ -24,8 +24,11 @@ class Markups
                     ["text" => Emoticons::getEmojiList() . "    Lista per Prezzo    " . Emoticons::getEmojiList(), "callback_data" => "/listaprezzo"]
                 ],
                 [
-                    ["text" => Emoticons::getEmojiIphone() . "    Lista iPhone 8    " . Emoticons::getEmojiIphone(), "callback_data" => "/listaiphone"],
-                    ["text" => Emoticons::getEmojiIphone() . "    Entra in Lista iPhone 8    " . Emoticons::getEmojiIphone(), "callback_data" => "/ordinaiphone"]
+                    ["text" => Emoticons::getEmojiIphone() . "    Lista iPhone X    " . Emoticons::getEmojiIphone(), "callback_data" => "/listaiphone"],
+                    ["text" => Emoticons::getEmojiIphone() . "    Entra in Lista iPhone X    " . Emoticons::getEmojiIphone(), "callback_data" => "/ordinaiphone"]
+                ],
+                [
+                    ["text" => Emoticons::getEmojiQuestion() . "    Aiuto    " . Emoticons::getEmojiQuestion(), "callback_data" => "/help"]
                 ]
             ]
         ];

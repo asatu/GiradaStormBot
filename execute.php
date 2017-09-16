@@ -9,17 +9,15 @@ $command = $telegramClient->GetInputCommand();
 
 if(strcmp($command, "/start") === 0)
 {
-    $telegramClient->ShowHomeView();
+    $telegramClient->ShowStartView();
+}
+elseif(strcmp($command, "/home") === 0)
+{
+    $telegramClient->ShowMainMenuView();
 }
 elseif(strcmp($command, "/lista") === 0)
 {
-    $text = "Visualizza la lista aggiornata";
-
-    $response = $telegram->sendMessage([
-        'chat_id' => $request->Chat_id,
-        'text' => $text,
-        'reply_markup' => Markups::showListMenu()
-    ]);
+    $telegramClient->ShowListView();
 }
 /**
 elseif(strcmp($text, "/listaprezzo") === 0)
@@ -80,16 +78,7 @@ elseif(strcmp($command, "/ordina") === 0)
         }
     }
 }
-elseif(strcmp($command, "/home") === 0)
-{
-    $text = "Seleziona un azione";
 
-    $response = $telegram->sendMessage([
-        'chat_id' => $chatId,
-        'text' => $text,
-        'reply_markup' => Markups::showHomeMenu()
-    ]);
-}
 elseif(strcmp($command, "Annulla") === 0)
 {
     $text = "Annullato";

@@ -31,4 +31,8 @@ class Emoticons
     public static function getEmojiBack() {
         return json_decode('"\ud83d\udd19"');
     }
+
+    public static function getEmojiQuestion() {
+        return json_decode('"\u53\u27"');
+    }
 }
