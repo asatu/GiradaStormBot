@@ -8,11 +8,11 @@
 
 class SessionClient
 {
-    private $service_url = 'http://giradastorm.altervista.org/_php/api/session/select.php';
+    private $service_url = 'http://giradastorm.altervista.org/_php/api/session/select.php?u=';
 
     public function GetCurrentSession($username)
     {
-        $curl = curl_init($this->service_url);
+        $curl = curl_init($this->service_url . $username);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         $curl_response = curl_exec($curl);
         if ($curl_response === false) {
