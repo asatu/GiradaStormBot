@@ -42,12 +42,12 @@ $sessionState = $session->GetCurrentSession($username);
 if (isset($sessionState)) {
     $param = $input;
     $input = "/ordina";
-
-    $telegram->sendMessage([
-        'chat_id' => $chatId,
-        'text' => 'resp:' . $sessionState
-    ]);
 }
+
+$telegram->sendMessage([
+    'chat_id' => $chatId,
+    'text' => 'resp:' . $sessionState
+]);
 
 $telegram->sendMessage([
     'chat_id' => $chatId,
