@@ -1,6 +1,5 @@
 <?php
 
-
 require_once('classes/telegramConfig.php');
 require_once('classes/markups.php');
 require_once('vendor/autoload.php');
@@ -35,14 +34,27 @@ else
     //$message->entities[0]->offset = $updateId + 1;
 }
 
-if(isset($_SESSION['order_pending']) && !empty($_SESSION['order_pending']))
-{
+
+
+
+$service_url = 'http://giradastorm.altervista.org/_php/api/list/read.php';
+$curl = curl_init($service_url);
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+$curl_response = curl_exec($curl);
+if ($curl_response === false) {
+    $info = curl_getinfo($curl);
+    curl_close($curl);
+    die('error occured during curl exec. Additioanl info: ' . var_export($info));
+}
+curl_close($curl);
+$decoded = json_decode($curl_response);
+if (!isset($decoded->response->status) && $decoded->response->status != 'ERROR') {
     $param = $input;
     $input = "/ordina";
 
     $telegram->sendMessage([
         'chat_id' => $chatId,
-        'text' => $input . $param . 'esiste'
+        'text' => 'resp:' . $curl_response
     ]);
 }
 
@@ -58,9 +70,6 @@ $telegram->sendMessage([
 
 if(strcmp($input, "/start") === 0)
 {
-
-    session_start();
-    
 	$text =
 		"Ciao *$first_name*, benvenuto!\n"
 		."\n"
@@ -95,7 +104,7 @@ elseif(strcmp($text, "/listaprezzo") === 0)
  * */
 elseif(strcmp($input, "/ordina") === 0)
 {
-    if($username == '')
+    if(!isset($username) || empty($username))
     {
         $telegram->sendMessage([
             'chat_id' => $chatId,
@@ -104,8 +113,8 @@ elseif(strcmp($input, "/ordina") === 0)
     }
     else
     {
-        $_SESSION['order_pending'] = true;
-        if(!isset($_SESSION['order_step']) || empty($_SESSION['order_step']))
+
+        if(!isset($decoded) || empty($decoded))
         {
             $text =
                 "Verrai guidato passo passo per metterti in lista.\n"
@@ -118,10 +127,8 @@ elseif(strcmp($input, "/ordina") === 0)
                 'text' => $text,
                 'reply_markup' => Markups::showCancelMenu()
             ]);
-
-            $_SESSION['order_step'] = 1;
         }
-        elseif($_SESSION['order_step'] == 1)
+        elseif($decoded == 'Stato1')
         {
             $_SESSION['order_step'] = 2;
 
@@ -131,20 +138,16 @@ elseif(strcmp($input, "/ordina") === 0)
                 'reply_markup' => Markups::showCancelMenu()
             ]);
         }
-        elseif($_SESSION['order_step'] == 2)
+        elseif($decoded == 'Stato2')
         {
-            $_SESSION['order_step'] = 3;
-
             $telegram->sendMessage([
                 'chat_id' => $chatId,
                 'text' => 'Inserisci il *prezzo*: ',
                 'reply_markup' => Markups::showCancelMenu()
             ]);
         }
-        elseif($_SESSION['order_step'] == 3)
+        elseif($decoded == 'Stato3')
         {
-            $_SESSION['order_step'] = 4;
-
             $telegram->sendMessage([
                 'chat_id' => $chatId,
                 'text' => 'bravo ',
@@ -173,12 +176,3 @@ elseif(strcmp($input, "Annulla") === 0)
         'reply_markup' => Markups::removeMenu()
     ]);
 }
-
-if(isset($_SESSION['order_pending']) && !empty($_SESSION['order_pending']))
-{
-    $response = $telegram->sendMessage([
-        'chat_id' => $chatId,
-        'text' =>'wow'
-    ]);
-}
-
