@@ -45,7 +45,7 @@ if (isset($sessionState)) {
 
     $telegram->sendMessage([
         'chat_id' => $chatId,
-        'text' => 'resp:' . $curl_response
+        'text' => 'resp:' . $sessionState
     ]);
 }
 
@@ -104,7 +104,6 @@ elseif(strcmp($input, "/ordina") === 0)
     }
     else
     {
-
         if(!isset($decoded) || empty($decoded))
         {
             $text =
@@ -119,7 +118,7 @@ elseif(strcmp($input, "/ordina") === 0)
                 'reply_markup' => Markups::showCancelMenu()
             ]);
         }
-        elseif($decoded == 'Stato1')
+        elseif($decoded == 'Step1')
         {
             $_SESSION['order_step'] = 2;
 
@@ -129,7 +128,7 @@ elseif(strcmp($input, "/ordina") === 0)
                 'reply_markup' => Markups::showCancelMenu()
             ]);
         }
-        elseif($decoded == 'Stato2')
+        elseif($decoded == 'Step2')
         {
             $telegram->sendMessage([
                 'chat_id' => $chatId,
@@ -137,7 +136,7 @@ elseif(strcmp($input, "/ordina") === 0)
                 'reply_markup' => Markups::showCancelMenu()
             ]);
         }
-        elseif($decoded == 'Stato3')
+        elseif($decoded == 'Step3')
         {
             $telegram->sendMessage([
                 'chat_id' => $chatId,
