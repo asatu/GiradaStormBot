@@ -218,6 +218,7 @@ class TelegramClient
 
         $this->telegram->sendMessage([
             'chat_id' => $this->request->Chat_id,
+            'parse_mode' => 'Markdown',
             'text' => "Sei stato messo in lista. Al momento dell'ordine su girada devi usare questo codice amico: *" . $response . "*",
             'reply_markup' => Markups::removeMenu()
         ]);
