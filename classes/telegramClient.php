@@ -211,14 +211,14 @@ class TelegramClient
     public function ShowConfirmOrderView()
     {
         $list = new ListClient();
-        $list->GetIn($this->request->Username);
+        $reponse = $list->GetIn($this->request->Username);
 
         $session = new SessionClient();
         $session->DeleteCurrentSession($this->request->Username);
 
         $this->telegram->sendMessage([
             'chat_id' => $this->request->Chat_id,
-            'text' => 'Sei stato messo in lista',
+            'text' => 'Sei stato messo in lista: ' . $reponse,
             'reply_markup' => Markups::removeMenu()
         ]);
     }
