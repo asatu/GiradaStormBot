@@ -54,9 +54,13 @@ class TelegramClient
         $session = new SessionClient();
         $this->sessionState = $session->GetCurrentSession($this->request->Username);
 
-        if (isset($this->sessionState) && !empty($this->sessionState)) {
-            $this->request->Args = $this->request->Command;
-            $this->request->Command = "/ordina";
+        if (isset($this->sessionState) && !empty($this->sessionState))
+        {
+            if($this->request->Command != "Annulla" || $this->request->Command != "Conferma")
+            {
+                $this->request->Args = $this->request->Command;
+                $this->request->Command = "/ordina";
+            }
         }
 
         return $this->request->Command;
