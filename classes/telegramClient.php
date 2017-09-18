@@ -46,7 +46,7 @@ class TelegramClient
             $this->request->Command = $telegramUpdate->getMessage()->getText();
             // $message->entities[0]->offset = $updateId + 1;
         } else /** E' un comando che viene da un pulsante */ {
-            $this->request->Command = $request->getCallbackQuery()->getData();
+            $this->request->Command = $telegramUpdate->getCallbackQuery()->getData();
             //$message->entities[0]->offset = $updateId + 1;
         }
 
