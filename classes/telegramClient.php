@@ -7,6 +7,7 @@
  */
 
 require_once('api_clients/sessionClient.php');
+require_once('api_clients/listClient.php');
 require_once('api_clients/anagraficaClient.php');
 require_once('poco/request.php');
 require_once('markups.php');
@@ -209,6 +210,9 @@ class TelegramClient
 
     public function ShowConfirmOrderView()
     {
+        $list = new ListClient();
+        $list->GetIn($this->request->Username);
+
         $session = new SessionClient();
         $session->DeleteCurrentSession($this->request->Username);
 

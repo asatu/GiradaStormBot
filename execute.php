@@ -10,7 +10,7 @@ if(strcmp($command, "/start") === 0)
 {
     $telegramClient->ShowStartView();
 }
-elseif(strcmp($command, "/home") === 0)
+elseif(strcmp($command, "/menu") === 0)
 {
     $telegramClient->ShowMainMenuView();
 }
