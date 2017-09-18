@@ -63,6 +63,12 @@ class TelegramClient
             }
         }
 
+        $this->telegram->sendMessage([
+            'chat_id' => $this->request->Chat_id,
+            'text' => $this->request->Command,
+            'reply_markup' => Markups::removeMenu()
+        ]);
+
         return $this->request->Command;
     }
 
