@@ -54,6 +54,12 @@ class TelegramClient
         $session = new SessionClient();
         $this->sessionState = $session->GetCurrentSession($this->request->Username);
 
+        $this->telegram->sendMessage([
+            'chat_id' => $this->request->Chat_id,
+            'text' => $this->request->Command,
+            'reply_markup' => Markups::removeMenu()
+        ]);
+        
         if (isset($this->sessionState) && !empty($this->sessionState))
         {
             if(strcmp($this->request->Command, "Annulla") != 0 || strcmp($this->request->Command, "Conferma") != 0)
