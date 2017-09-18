@@ -56,7 +56,7 @@ class TelegramClient
 
         if (isset($this->sessionState) && !empty($this->sessionState))
         {
-            if($this->request->Command != "Annulla" || $this->request->Command != "Conferma")
+            if(strcmp($this->request->Command, "Annulla") != 0 || strcmp($this->request->Command, "Conferma") != 0)
             {
                 $this->request->Args = $this->request->Command;
                 $this->request->Command = "/ordina";
