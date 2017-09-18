@@ -7,6 +7,7 @@
  */
 
 require_once('api_clients/sessionClient.php');
+require_once('api_clients/anagraficaClient.php');
 require_once('poco/request.php');
 require_once('markups.php');
 
