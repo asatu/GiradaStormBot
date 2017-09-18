@@ -8,9 +8,10 @@
 
 class SessionClient
 {
-    private $service_read_url = 'http://giradastorm.altervista.org/_php/api/session/select.php?u=';
     private $service_create_url = 'http://giradastorm.altervista.org/_php/api/session/create.php';
+    private $service_read_url = 'http://giradastorm.altervista.org/_php/api/session/select.php?u=';
     private $service_update_url = 'http://giradastorm.altervista.org/_php/api/session/update.php';
+    private $service_delete_url = 'http://giradastorm.altervista.org/_php/api/session/delete.php?u=';
 
     public function GetCurrentSession($username)
     {
@@ -139,5 +140,20 @@ class SessionClient
         }
 
         return true;
+    }
+
+    public function DeleteCurrentSession($username)
+    {
+        $curl = curl_init($this->service_delete_url . $username);
+        curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+        $curl_response = curl_exec($curl);
+        if ($curl_response === false) {
+            $info = curl_getinfo($curl);
+            curl_close($curl);
+            die('error occured during curl exec. Additioanl info: ' . var_export($info));
+        }
+        curl_close($curl);
+
+        return json_decode($curl_response);
     }
 }

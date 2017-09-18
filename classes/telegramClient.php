@@ -151,7 +151,7 @@ class TelegramClient
             elseif($this->sessionState == 'Step1')
             {
                 $anagrafica = new AnagraficaClient();
-                $codicePersonale = $anagrafica->CreateAnagrafica($this->request->Username, $this->request->Args);
+                $anagrafica->CreateAnagrafica($this->request->Username, $this->request->Args);
 
                 $session->AddCodicePersonale($this->request->Username, $this->request->Args);
 
@@ -189,5 +189,29 @@ class TelegramClient
 
             }
         }
+    }
+
+    public function ShowCancelOrderView()
+    {
+        $session = new SessionClient();
+        $session->DeleteCurrentSession($this->request->Username);
+
+        $this->telegram->sendMessage([
+            'chat_id' => $this->request->Chat_id,
+            'text' => 'Annullato. Non verrai messo in lista',
+            'reply_markup' => Markups::removeMenu()
+        ]);
+    }
+
+    public function ShowConfirmOrderView()
+    {
+        $session = new SessionClient();
+        $session->DeleteCurrentSession($this->request->Username);
+
+        $this->telegram->sendMessage([
+            'chat_id' => $this->request->Chat_id,
+            'text' => 'Sei stato messo in lista',
+            'reply_markup' => Markups::removeMenu()
+        ]);
     }
 }
