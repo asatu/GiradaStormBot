@@ -12,7 +12,8 @@ class ListClient
 
     public function GetIn($username)
     {
-        $curl = curl_init($this->service_create_url);
+        $result = "";
+        $curl = curl_init($this->service_get_in_url);
         $curl_post_data = array(
             'username' => $username
         );
@@ -25,14 +26,14 @@ class ListClient
         if ($curl_response === false) {
             $info = curl_getinfo($curl);
             curl_close($curl);
-            die('error occured during curl exec. Additioanl info: ' . var_export($info));
+            $result = 'error occured during curl exec. Additioanl info: ' . var_export($info);
         }
         curl_close($curl);
         $decoded = json_decode($curl_response);
         if (isset($decoded->response->status) && $decoded->response->status == 'ERROR') {
-            die('error occured: ' . $decoded->response->errormessage);
+            $result = 'error occured: ' . $decoded->response->errormessage;
         }
 
-        return true;
+        return $curl_response;
     }
 }
