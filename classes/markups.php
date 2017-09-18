@@ -15,10 +15,13 @@ class Markups
         $home_markup = [
             'inline_keyboard' => [
                 [
+                    ["text" => Emoticons::getEmojiList() . "    Lista Completa    " . Emoticons::getEmojiList(), "url" => "http://giradastorm.altervista.org/lista"]
+                ],
+                [
                     ["text" => Emoticons::getEmojiPointRight() . "    Mettiti in Lista    " . Emoticons::getEmojiPointRight(), "callback_data" => "/ordina"]
                 ],
                 [
-                    ["text" => Emoticons::getEmojiList() . "    Lista Completa    " . Emoticons::getEmojiList(), "url" => "http://giradastorm.altervista.org/lista"]
+                    ["text" => Emoticons::getEmojiPointRight() . "    Invia Screen ordine    " . Emoticons::getEmojiPointRight(), "callback_data" => "/ordina"]
                 ],
                 [
                     ["text" => Emoticons::getEmojiIphone() . "    Lista iPhone X    " . Emoticons::getEmojiIphone(), "callback_data" => "/listaiphone"],

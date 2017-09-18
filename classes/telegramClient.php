@@ -221,7 +221,7 @@ class TelegramClient
             'parse_mode' => 'Markdown',
             'text' => "Sei stato messo in lista. Al momento dell'ordine su girada devi usare questo codice amico: *" . $response . "* .\n"
                         . "Una volta terminato l'acquisto torna qui e inviaci lo screen dell'ordine effettuato su girada cliccando "
-                        . "sul pulsante *Invia screen ordine* o scrivendo il comenado */confermaordine*.\n"
+                        . "sul pulsante *Invia screen ordine* o scrivendo il comando /confermaordine.\n"
                         . "Ricorda che se non confermi l'ordine non puoi ricevere aiuti. ",
             'reply_markup' => Markups::removeMenu()
         ]);
