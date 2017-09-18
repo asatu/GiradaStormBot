@@ -20,7 +20,10 @@ class TelegramClient
     private $telegram;
     private $request;
 
-    function __construct() {
+    private $sessionState;
+
+    function __construct()
+    {
         $this->telegram = new Api(TelegramClient::BOT_TOKEN);
     }
 
@@ -38,25 +41,21 @@ class TelegramClient
         $this->request->Last_name = $chat->getLastName();
         $this->request->Username = $chat->getUsername();
 
-        if ($telegramUpdate->detectType() == 'message')
-        {
+        if ($telegramUpdate->detectType() == 'message') {
             $this->request->Command = $telegramUpdate->getMessage()->getText();
             // $message->entities[0]->offset = $updateId + 1;
-        }
-        else /** E' un comando che viene da un pulsante */
-        {
+        } else /** E' un comando che viene da un pulsante */ {
             $this->request->Command = $request->getCallbackQuery()->getData();
             //$message->entities[0]->offset = $updateId + 1;
         }
 
         /** Se la sessione è impostata vuol dire che l'utente sta effettuando un ordine */
         $session = new SessionClient();
-        $sessionState = $session->GetCurrentSession($this->request->Username);
+        $this->sessionState = $session->GetCurrentSession($this->request->Username);
 
-        if (isset($sessionState) && !empty($sessionState))
-        {
+        if (isset($sessionState) && !empty($sessionState)) {
+            $this->request->Args = $this->request->Command;
             $this->request->Command = "/ordina";
-            $this->request->Args = $sessionState;
         }
 
         return $this->request->Command;
@@ -66,13 +65,12 @@ class TelegramClient
     {
         $text =
             "Ciao *" . $this->request->First_name . "*, benvenuto!\n"
-            ."\n"
-            ."Ti ricordiamo che tutto quello che riguarda *Girada Storm* non ha nulla a che vedere con *Girada*. Lo scopo di questo gruppo e di questo bot "
-            ."è quello di offrire gratuitamente un aiuto agli utenti per trovare nel minor tempo possibile i 3 amici necessari per ottenere il massimo sconto. "
-            ."Non siamo quindi responsabili nè dell'ordine nè del prodotto acquistato, per i quali potrai contattare direttamente Girada.";
+            . "\n"
+            . "Ti ricordiamo che tutto quello che riguarda *Girada Storm* non ha nulla a che vedere con *Girada*. Lo scopo di questo gruppo e di questo bot "
+            . "è quello di offrire gratuitamente un aiuto agli utenti per trovare nel minor tempo possibile i 3 amici necessari per ottenere il massimo sconto. "
+            . "Non siamo quindi responsabili nè dell'ordine nè del prodotto acquistato, per i quali potrai contattare direttamente Girada.";
 
-        if(!isset($this->request->Username) || empty($this->request->Username))
-        {
+        if (!isset($this->request->Username) || empty($this->request->Username)) {
             $text = $text . "\n" .
                 "\n" .
                 "*N.B.* :Per metterti in lista è necessario che tu imposti uno username.";
@@ -104,5 +102,91 @@ class TelegramClient
             'text' => 'TODO : Qui va del testo da decidere',
             'reply_markup' => Markups::showMainMenu()
         ]);
+    }
+
+    public function ShowGetInListView()
+    {
+        if(!isset($this->request->Username) || empty($this->request->Username))
+        {
+            $this->telegram->sendMessage([
+                'chat_id' => $this->request->Chat_id,
+                'text' => 'Devi impostare lo username prima di ordinare'
+            ]);
+        }
+        else
+        {
+            $session = new SessionClient();
+
+            if(!isset($this->sessionState) || empty($this->sessionState))
+            {
+                $text =
+                    "Verrai guidato passo passo per metterti in lista.\n"
+                    . "Ricorda che devi fare questi passaggi *prima* di effettuare l'ordine su Girada.\n"
+                    . "\n";
+
+                $anagrafica = new AnagraficaClient();
+                $codicePersonale = $anagrafica->GetCodicePersonale($this->request->Username);
+
+                if(!isset($codicePersonale) || empty($codicePersonale))
+                {
+                    $text = $text . "Inserisci il tuo *codice Girada personale*: ";
+                    $step = "Step1";
+                }
+                else
+                {
+                    $text = $text . "Inserisci il *prodotto* che vuoi acquistare: ";
+                    $step = "Step2";
+                }
+
+                $session->CreateNewSession($this->request->Username, $this->request->First_name, $this->request->Last_name, $codicePersonale, $step);
+
+                $this->telegram->sendMessage([
+                    'chat_id' => $this->request->Chat_id,
+                    'text' => $text,
+                    'parse_mode' => 'Markdown',
+                    'reply_markup' => Markups::showCancelMenu()
+                ]);
+            }
+            elseif($this->sessionState == 'Step1')
+            {
+                $anagrafica = new AnagraficaClient();
+                $codicePersonale = $anagrafica->CreateAnagrafica($this->request->Username, $this->request->Args);
+
+                $session->AddCodicePersonale($this->request->Username, $this->request->Args);
+
+                $this->telegram->sendMessage([
+                    'chat_id' => $this->request->Chat_id,
+                    'text' => 'Inserisci il *prodotto* che vuoi acquistare: ',
+                    'parse_mode' => 'Markdown',
+                    'reply_markup' => Markups::showCancelMenu()
+                ]);
+            }
+            elseif($this->sessionState == 'Step2')
+            {
+                $session->AddProdotto($this->request->Username, $this->request->Args);
+
+                $this->telegram->sendMessage([
+                    'chat_id' => $this->request->Chat_id,
+                    'text' => 'Inserisci il *prezzo* del prodotto: ',
+                    'parse_mode' => 'Markdown',
+                    'reply_markup' => Markups::showCancelMenu()
+                ]);
+            }
+            elseif($this->sessionState == 'Step3')
+            {
+                $session->AddPrezzo($this->request->Username, $this->request->Args);
+
+                $this->telegram->sendMessage([
+                    'chat_id' => $this->request->Chat_id,
+                    'text' => 'Verifica i dati e *conferma* o annulla',
+                    'parse_mode' => 'Markdown',
+                    'reply_markup' => Markups::showCancelAndConfirmMenu()
+                ]);
+            }
+            elseif($this->sessionState == 'Step4')
+            {
+
+            }
+        }
     }
 }

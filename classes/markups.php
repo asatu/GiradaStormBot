@@ -21,9 +21,6 @@ class Markups
                     ["text" => Emoticons::getEmojiList() . "    Lista Completa    " . Emoticons::getEmojiList(), "url" => "http://giradastorm.altervista.org/lista"]
                 ],
                 [
-                    ["text" => Emoticons::getEmojiList() . "    Lista per Prezzo    " . Emoticons::getEmojiList(), "callback_data" => "/listaprezzo"]
-                ],
-                [
                     ["text" => Emoticons::getEmojiIphone() . "    Lista iPhone X    " . Emoticons::getEmojiIphone(), "callback_data" => "/listaiphone"],
                     ["text" => Emoticons::getEmojiIphone() . "    Entra in Lista iPhone X    " . Emoticons::getEmojiIphone(), "callback_data" => "/ordinaiphone"]
                 ],
@@ -57,6 +54,19 @@ class Markups
         $cancel_markup = [
             'keyboard' => [
                     ["Annulla"]
+            ],
+            'resize_keyboard' => true
+        ];
+
+        return json_encode($cancel_markup);
+    }
+
+    public static function showCancelAndConfirmMenu()
+    {
+        $cancel_markup = [
+            'keyboard' => [
+                ["Annulla"],
+                ["Conferma"]
             ],
             'resize_keyboard' => true
         ];
